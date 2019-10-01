@@ -40,3 +40,37 @@ CATATAN:
 ```
 10. Test.
 11. Commit perubahan, kemudian lakukan pull request. 
+КОТЛИН / Везде и Хактоберфест Матарам
+WEB Challenge
+Далам репозиторий ini anda di challenge untuk membuat веб-сайт sebuah dengan menggunakan Kotlin. Рамки Ян дигунакан пада хранилище Ини Якни: ктор.
+
+Berkontribusi лицо:
+Вилочный проект
+Клон ке локал компутер анда
+Buka проект dengan IntelliJ IDEA
+Бука директор src / contributors
+Tambahkan class baru (WAJIB KOTLIN), пенаманский формат: NamaAnda, atau NamaAnda123, dst.
+Реализовать интерфейс Contributor di class tersebut.
+Иси Контент. Файл компоновки папок HaiiNukman.kt jangan buat companion объект инициализирует Untuk memidahkan, связывающий класс помощника dengan.
+    сопутствующий объект {
+        забавная инициализация (карта: MutableMap <String, Contributor>) {
+            map ["ha-yi"] = HayiNukman ()
+            map ["hayinukman"] = HayiNukman ()
+            map ["hayi"] = HayiNukman ()
+        }
+    }
+Catatan:
+
+саат маппинг, гунакан уникальный идентификатор, биса идентификатор гитхуб анда, адрес электронной почты атау.
+джанган ганти ID оранг лэйн ян судах ада. первым пришел, первым обслужен. Баги ян менговерриде нама оранг лейн, мака тидак акан ди сли (пи дитолак).
+Сетела класс дибуат, бука файл ContributorHelper.kt
+Соучастник класса Tambahkan inisialisasi anda ke sini dalam блок ini di class ContributorHelper. Contohnya:
+    init {
+        contributors.apply {
+            HayiNukman.initialize (это)
+            Abdullah.initialize (это)
+            RobiHuzwandar.initialize (это)
+        }
+    }
+Тест.
+Совершить перубахан, кемудиан лакукан тянуть запрос.
