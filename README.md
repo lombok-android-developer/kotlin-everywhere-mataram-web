@@ -67,7 +67,7 @@ In this Repository you are challenged to make a Website using Kotlin. Framework 
         }
     }
 ``` 
-# Noted : 
+#### Noted : 
 - when mapping, use unique id, you can use your github id or your email address.
 - don't change other people's IDs that already exist. first come first serve. for those who override the name another person, it will not be merged(Pull Request Rejected)
 
@@ -87,7 +87,7 @@ In this Repository you are challenged to make a Website using Kotlin. Framework 
 10. Testing
 11. Commit your changes, then do pull request 
 
-### #HAPPYHACKTOBERFEST
+## #HAPPYHACKTOBERFEST
 
 Rewards list :
 1. <img src="images/1.jpg"/>
@@ -102,5 +102,5 @@ Rewards list :
 
 6. <img src="images/6.jpg"/>
 
-# Noted : Swags can be claimed when attending Kotlin/Everywhere & Hacktoberfest Mataram at 26'th October 2019.
+#### Noted : Swags can be claimed when attending Kotlin/Everywhere & Hacktoberfest Mataram at 26'th October 2019.
 
