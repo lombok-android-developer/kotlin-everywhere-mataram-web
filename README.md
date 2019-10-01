@@ -89,6 +89,7 @@ In this Repository you are challenged to make a Website using Kotlin. Framework 
 ## #HAPPYHACKTOBERFEST
 
 Rewards list :
+#### Noted : Swags can be claimed when attending Kotlin/Everywhere & Hacktoberfest Mataram at 26'th October 2019.
 1. <img src="images/1.jpg"/>
 
 2. <img src="images/2.jpg"/>
@@ -101,5 +102,5 @@ Rewards list :
 
 6. <img src="images/6.jpg"/>
 
-#### Noted : Swags can be claimed when attending Kotlin/Everywhere & Hacktoberfest Mataram at 26'th October 2019.
+
 
