@@ -41,6 +41,9 @@ CATATAN:
 10. Test.
 11. Commit perubahan, kemudian lakukan pull request. 
 
+### ===================================================================================================================================
+### ===================================================================================================================================
+
 # KOTLIN/Everywhere & Hacktoberfest Mataram
 ## WEB Challenge 
 
@@ -64,7 +67,7 @@ In this Repository you are challenged to make a Website using Kotlin. Framework 
         }
     }
 ``` 
-Noted : 
+# Noted : 
 - when mapping, use unique id, you can use your github id or your email address.
 - don't change other people's IDs that already exist. first come first serve. for those who override the name another person, it will not be merged(Pull Request Rejected)
 
@@ -87,6 +90,17 @@ Noted :
 ### #HAPPYHACKTOBERFEST
 
 Rewards list :
-1. 
+1. <img src="images/1.jpg"/>
 
+2. <img src="images/2.jpg"/>
+
+3. <img src="images/3.jpg"/>
+
+4. <img src="images/4.jpg"/>
+
+5. <img src="images/5.jpg"/>
+
+6. <img src="images/6.jpg"/>
+
+# Noted : Swags can be claimed when attending Kotlin/Everywhere & Hacktoberfest Mataram at 26'th October 2019.
 
