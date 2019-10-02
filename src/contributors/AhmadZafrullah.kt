@@ -8,13 +8,6 @@ import io.ktor.application.ApplicationCall
 import io.ktor.mustache.MustacheContent
 import io.ktor.response.respond
 
-/**
- * SAMPLE CV yang menggunakan standard template
- * Pastikan nama class nya adalah Unique,
- * misalnya nama Anda: Husein Abdullah,
- * maka nama classnya bisa: HAbdullah, HuseinAbdullah, HuseinAbd123, dll.
- * Jika sudah ada yang menggunakan nama class tersebut, tolong gunakan nama yang lain.
- */
 class AhmadZafrullah : Contributor {
     override val photoUrl: String?
         get() = "https://avatars1.githubusercontent.com/u/1916749?s=460&v=4"
