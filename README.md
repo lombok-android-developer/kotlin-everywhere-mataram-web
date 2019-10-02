@@ -4,6 +4,8 @@
 Dalam repository ini anda di challenge untuk membuat sebuah website dengan menggunakan Kotlin. Framework yang digunakan pada repository ini yakni: [ktor](http://ktor.io/).
 
 ### Cara Berkontribusi:
+Sebelum memulai, silahkan beri Bintang.
+
 1. Fork Project
 2. Clone ke lokal komputer anda
 3. Buka project dengan IntelliJ IDEA
@@ -49,6 +51,8 @@ CATATAN:
 In this Repository you are challenged to make a Website using Kotlin. Framework used in this repository is [ktor](http://ktor.io/).
 
 ### How to Contribute :
+Before start contributing, please give star to this repo.
+
 1. Fork the Project
 2. Clone or Download to your local storage
 3. Open the project using IntelliJ IDEA
@@ -88,19 +92,11 @@ In this Repository you are challenged to make a Website using Kotlin. Framework 
 
 ## #HAPPYHACKTOBERFEST
 
-Rewards list :
+# Rewards/Swags
 #### Noted : Swags can be claimed when attending Kotlin/Everywhere & Hacktoberfest Mataram at 26'th October 2019.
-1. <img src="images/1.jpg"/>
-
-2. <img src="images/2.jpg"/>
-
-3. <img src="images/3.jpg"/>
-
-4. <img src="images/4.jpg"/>
-
-5. <img src="images/5.jpg"/>
-
-6. <img src="images/6.jpg"/>
+<img src="images/1.jpg" width="300"/>  <img src="images/2.jpg" width="300"/> 
+<img src="images/3.jpg" width="300"/>  <img src="images/4.jpg" width="300"/> 
+<img src="images/5.jpg" width="300"/>  <img src="images/6.jpg" width="300"/>
 
 
 
