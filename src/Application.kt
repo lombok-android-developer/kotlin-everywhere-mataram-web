@@ -51,37 +51,41 @@ fun Application.module(testing: Boolean = false) {
     }
 
     routing {
-//        get("/") {
-//            call.respondHtml {
-//                head { }
-//                body {
-//                    h1 { +"SELAMAT DATANG DI KOTLIN/EVERYWHERE & HACKTOBERFEST MATARAM" }
-//                    p {
-//                        +"Website ini berisi daftar kontributor dalam event Kotlin/Everywhere dan Hacktoberfest Mataram 2019"
-//                    }
-//                    p {
-//                        +"Daftar Rewards:"
-//                        ul {
-//                            li { +"Swags dari Tokopedia" }
-//                            li { +"Swags dari Lumbung Inovasi" }
-//                            li { +"Swags dari Kotlin/Everywhere Mataram" }
-//                            li { +"Swags dari Digitalocean" }
-//                        }
-//                    }
-//                    p {
-//                        +"Daftar Contributor:"
-//                        ul {
-//                            ContributorHelper?.contributors?.forEach { key, user ->
-//                                li { a("/hack/$key") { +"${user.name} - ${user.currentJob}" } }
-//                            }
-//                        }
-//                    }
-//                }
-//            }
-//        }
         get("/") {
-            call.respond(MustacheContent("index.hbs", mapOf("user" to "")))
+            call.respondHtml {
+                head { }
+                body {
+                    h1 { +"SELAMAT DATANG DI KOTLIN/EVERYWHERE & HACKTOBERFEST MATARAM" }
+                    p {
+                        +"Website ini berisi daftar kontributor dalam event Kotlin/Everywhere dan Hacktoberfest Mataram 2019"
+                    }
+                    p {
+                        +"Daftar Rewards:"
+                        ul {
+                            li { +"Swags dari Tokopedia" }
+                            li { +"Swags dari Lumbung Inovasi" }
+                            li { +"Swags dari Kotlin/Everywhere Mataram" }
+                            li { +"Swags dari Digitalocean" }
+                        }
+                    }
+                    p {
+                        +"Daftar Contributor:"
+                        ul {
+                            ContributorHelper?.contributors?.entries?.associate { (k, v) ->
+                                v.name to (k to v)
+                            }?.forEach { t, u ->
+                                li { a("/hack/${u?.first}") { +"${t} - ${u?.second?.currentJob}" } }
+                            }
+                        }
+                    }
+                }
+            }
         }
+
+        // todo BOUNTY issues, change index layout see issue list
+//        get("/") {
+//            call.respond(MustacheContent("index.hbs", mapOf("user" to "")))
+//        }
         get("/hack/{id}") {
             ContributorHelper.response(call)
         }
