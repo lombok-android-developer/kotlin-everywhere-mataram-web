@@ -61,8 +61,8 @@ class AriPurnamaAJi : Contributor{
                 ),
             Educations(
                 "Universitas Mataram",
-                "Graduate",
-                "2016 - Until Now",
+                "Undergraduate",
+                "2016",
                 "Informatics Engenering"
             )
         )
