@@ -15,69 +15,51 @@ import io.ktor.response.respond
  * maka nama classnya bisa: HAbdullah, HuseinAbdullah, HuseinAbd123, dll.
  * Jika sudah ada yang menggunakan nama class tersebut, tolong gunakan nama yang lain.
  */
-class HayiNukman : Contributor {
+class GustiCahya : Contributor {
     override val photoUrl: String?
-        get() = "https://www.dicoding.com/images/small/avatar/2018071714224122cd6855736cd00a225f99d4b6212d91.png"
+        get() = "https://www.dicoding.com/images/small/avatar/201909251907057dc5cc8e2d2bc86e8afb55f47c816a5b.jpg"
     override val descriptions: String?
-        get() = "isi dah bebas...."
+        get() = "Seorang pelajar yang gemar mendalami setiap aspek teknologi"
     override val currentJob: String?
-        get() = "Android Developer"
+        get() = "Pelajar"
     override val idGithub: String
-        get() = "@ha-yi"
+        get() = "@GustiCahya"
     override val name: String
-        get() = "Hayi Nukman"
+        get() = "Gusti Cahya"
     override val email: String?
-        get() = "hayinukman.kt@gmail.com"
+        get() = "gusticahyax@yahoo.com"
     override val linkedin: String?
-        get() = "https://www.linkedin.com/in/hayinukman/"
+        get() = "https://www.linkedin.com/in/gusti-cahya-68590517b/"
     override val stackOverflow: String?
         get() = null
     override val idTelegram: String?
-        get() = "@hayinukman"
+        get() = "@GustiCahya"
     override val skillset: List<Skills>?
         get() = listOf(
             Skills("Kotlin"),
-            Skills("Java"),
-            Skills("C/C++"),
-            Skills("IOT"),
-            Skills("Android Development"),
-            Skills("Kotlin Web"),
-            Skills("Kotlin API"),
-            Skills("Full-stack Kotlin"),
-            Skills("Flutter"),
-            Skills("Flutter Web"),
-            Skills("Flutter Desktop")
+            Skills("Javascript"),
+            Skills("PHP"),
+            Skills("Front-end Developer"),
+            Skills("Back-end Developer"),
+            Skills("Codeigniter"),
+            Skills("Vuejs"),
+            Skills("Angularjs"),
+            Skills("HTML5 Canvas"),
+            Skills("TypeScript"),
+            Skills("Python"),
+            Skills("Ionic"),
+            Skills("Java")
         )
     override val location: String?
         get() = "Mataram"
     override val jobHistory: List<Jobs>?
         get() = listOf(
             Jobs(
-                "Android Developer",
-                "Samsung",
-                "Tukang ngetik aja",
-                "2013",
-                "2015"
-            ),
-            Jobs(
-                "Android Developer",
-                "Tokopedia",
-                "Tukang ngetik aja",
-                "2015",
-                "2016"
-            ),
-            Jobs(
-                "Android Developer",
-                "Freelance",
-                "Tukang ngetik aja",
-                "2016",
-                "2017"
-            ),
-            Jobs(
-                "Android Developer",
-                "Bukalapak",
-                "Tukang ngetik aja",
-                "2018"
+                "Rekayasa Perangkat Lunak",
+                "SMKN 2 Mataram",
+                "Pelajar",
+                "2018",
+                "on-going"
             )
         )
     override val educations: List<Educations>?
@@ -85,14 +67,8 @@ class HayiNukman : Contributor {
             Educations(
                 "Dicoding Academi",
                 "Associate",
-                "2018",
+                "2019 - on-going",
                 "KADE"
-            ),
-            Educations(
-                "AKAKOM Yogyakarta",
-                "S1",
-                "2006 - 2010",
-                "Teknik Informatika"
             )
         )
 
@@ -102,9 +78,9 @@ class HayiNukman : Contributor {
 
     companion object {
         fun initialize(map: MutableMap<String, Contributor>) {
-            map["ha-yi"] = HayiNukman()
-            map["hayinukman"] = HayiNukman()
-            map["hayi"] = HayiNukman()
+            map["GustiCahya"] = GustiCahya()
+            map["gusticahya"] = GustiCahya()
+            map["gusti"] = GustiCahya()
         }
     }
 }

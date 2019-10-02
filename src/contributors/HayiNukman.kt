@@ -4,7 +4,7 @@ import com.linov.community.Contributor
 import com.linov.community.Educations
 import com.linov.community.Jobs
 import com.linov.community.Skills
-import io.ktor.application.ApplicationCall
+import io.ktor.application.AplicationCall
 import io.ktor.mustache.MustacheContent
 import io.ktor.response.respond
 
