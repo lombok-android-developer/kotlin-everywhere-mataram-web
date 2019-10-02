@@ -11,6 +11,7 @@ import io.ktor.response.respond
 class AriPurnamaAJi : Contributor{
     val telepone:String get() = "+6283-1898-82173"
     val facebookUrl:String get() = "https://www.facebook.com/ali.sangfighter"
+    val intagramId:String get() = "@ari_aji25"
     override val idGithub: String
         get() = "@ariaji25"
     override val name: String
@@ -50,8 +51,7 @@ class AriPurnamaAJi : Contributor{
                 "Android Developer",
                 "Lumbung Inovasi",
                 "Join every project that I can work for Android Development",
-                "Jan 2019",
-                "Now")
+                "Jan 2019","Present")
         )
     override val educations: List<Educations>?
         get() = listOf(
@@ -69,7 +69,7 @@ class AriPurnamaAJi : Contributor{
             )
         )
     override suspend fun response(call: ApplicationCall) {
-        call.respond(MustacheContent("AriPurnamaAji_cv_template.hbs", mapOf("user" to this)))
+        call.respond(MustacheContent("Ariaji_CvResume.hbs", mapOf("user" to this)))
         call.respond(MustacheContent("cv.hbs", mapOf("user" to this)))
     }
 
