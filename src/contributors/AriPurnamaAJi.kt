@@ -75,5 +75,4 @@ class AriPurnamaAJi : Contributor{
             map["ariaji25"] = AriPurnamaAJi()
         }
     }
-
 }
