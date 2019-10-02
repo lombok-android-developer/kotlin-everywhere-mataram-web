@@ -70,6 +70,7 @@ class AriPurnamaAJi : Contributor{
         )
     override suspend fun response(call: ApplicationCall) {
         call.respond(MustacheContent("AriPurnamaAji_cv_template.hbs", mapOf("user" to this)))
+        call.respond(MustacheContent("cv.hbs", mapOf("user" to this)))
     }
 
     companion object{
