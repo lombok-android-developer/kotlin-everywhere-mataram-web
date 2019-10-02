@@ -51,45 +51,15 @@ fun Application.module(testing: Boolean = false) {
     }
 
     routing {
-//        get("/") {
-//            call.respondHtml {
-//                head { }
-//                body {
-//                    h1 { +"SELAMAT DATANG DI KOTLIN/EVERYWHERE & HACKTOBERFEST MATARAM" }
-//                    p {
-//                        +"Website ini berisi daftar kontributor dalam event Kotlin/Everywhere dan Hacktoberfest Mataram 2019"
-//                    }
-//                    p {
-//                        +"Daftar Rewards:"
-//                        ul {
-//                            li { +"Swags dari Tokopedia" }
-//                            li { +"Swags dari Lumbung Inovasi" }
-//                            li { +"Swags dari Kotlin/Everywhere Mataram" }
-//                            li { +"Swags dari Digitalocean" }
-//                        }
-//                    }
-//                    p {
-//                        +"Daftar Contributor:"
-//                        ul {
-//                            ContributorHelper?.contributors?.forEach { key, user ->
-//                                li { a("/hack/$key") { +"${user.name} - ${user.currentJob}" } }
-//                            }
-//                        }
-//                    }
-//                }
-//            }
-//        }
+        static {
+            resources("res")
+        }
+
         get("/") {
             call.respond(MustacheContent("index.hbs", mapOf("user" to "")))
         }
         get("/hack/{id}") {
             ContributorHelper.response(call)
         }
-
-        // todo problem on serving static content
-        get("default.css") {
-            call.respondFile(File("resources/res/default.css"))
-        }
-
     }
 }
