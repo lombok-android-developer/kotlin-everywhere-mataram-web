@@ -8,13 +8,6 @@ import io.ktor.application.ApplicationCall
 import io.ktor.mustache.MustacheContent
 import io.ktor.response.respond
 
-/**
- * SAMPLE CV yang menggunakan standard template
- * Pastikan nama class nya adalah Unique,
- * misalnya nama Anda: Husein Abdullah,
- * maka nama classnya bisa: HAbdullah, HuseinAbdullah, HuseinAbd123, dll.
- * Jika sudah ada yang menggunakan nama class tersebut, tolong gunakan nama yang lain.
- */
 class AddinGamaBertaqwa : Contributor {
     override val photoUrl: String?
         get() = "https://www.dicoding.com/images/small/avatar/201906190950408095d0c8bc386c52fdbaa27e0f255608.jpeg"
@@ -88,7 +81,7 @@ class AddinGamaBertaqwa : Contributor {
             ),
             Educations(
                 "Institut Teknologi Bandung",
-                "S1",
+                "S2",
                 "2013 - 2016",
                 "Magister Informatika"
             ),
