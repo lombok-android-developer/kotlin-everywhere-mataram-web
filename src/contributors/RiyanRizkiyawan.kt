@@ -30,7 +30,7 @@ class RiyanRizkiyawan : Contributor {
     override val skillset: List<Skills>?
         get() = listOf(
             Skills("Javascript"),
-            Skills("Node.js"),
+            Skills("Node.js")
         )
     override val location: String?
         get() = "Mataram"
@@ -41,8 +41,8 @@ class RiyanRizkiyawan : Contributor {
                 "PesanSayur.id",
                 "Design",
                 "2018",
-                "2019",
-            ),
+                "2019"
+            )
         )
     override val educations: List<Educations>?
         get() = listOf(
