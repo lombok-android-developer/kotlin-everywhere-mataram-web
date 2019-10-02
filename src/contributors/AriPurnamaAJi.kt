@@ -14,17 +14,18 @@ class AriPurnamaAJi : Contributor{
     override val name: String
         get() = "Ari Purnama Aji"
     override val photoUrl: String?
-        get() = "https://www.facebook.com/photo.php?fbid=2306173556270052&set=pb.100006322900001.-2207520000.1569939010.&type=3&theater"
+        get() = "https://scontent.fdps5-1.fna.fbcdn.net/v/t1.0-9/34482003_2002175153336562_3544921141166473216_n.jpg?_nc_cat=111&_nc_oc=AQn1oM97m-1avZgytPHJNbqdpy1WUkPVwv9x3dz7jCjg3lMBK1EYCJfEB17b67y4xrs&_nc_ht=scontent.fdps5-1.fna&oh=3beaa55704b12fa52bca261d2ab2889e&oe=5E3CF1F2"
     override val currentJob: String?
         get() = "Android Developer"
     override val email: String?
         get() = "ari.purnama838@gmail.com"
     override val descriptions: String?
-        get() = "I am Junior Developer, and My Quote is No Life Without Code, simple like that,but actualy we always need a women wkwkwk"
+        get() = "I am Junior Developer, I am satart Join into Android Development on 2019 start with Java Android, and Flutter for Mobile.\n " +
+                "After that I am join into Lumbung Inovasi to get more experience, and I join every project that I can to work with Android Development "
     override val linkedin: String?
         get() = "https://www.linkedin.com/in/ari-aji-29208b180/"
     override val stackOverflow: String?
-        get() = ""
+        get() = "https://stackoverflow.com/users/9967898/ari-purnama"
     override val idTelegram: String?
         get() = "@ariaji25"
     override val skillset: List<Skills>?
@@ -57,7 +58,13 @@ class AriPurnamaAJi : Contributor{
                 "Beginner",
                 "2019",
                 "Belajar Membuat Aplikasi Android untuk Pemula"
-                )
+                ),
+            Educations(
+                "Universitas Mataram",
+                "Graduate",
+                "2016 - Until Now",
+                "Informatics Engenering"
+            )
         )
     override suspend fun response(call: ApplicationCall) {
         call.respond(MustacheContent("cv.hbs", mapOf("user" to this)))
@@ -65,7 +72,7 @@ class AriPurnamaAJi : Contributor{
 
     companion object{
         fun initialize(map: MutableMap<String, Contributor>) {
-            map["ariaji25"] = HayiNukman()
+            map["ariaji25"] = AriPurnamaAJi()
         }
     }
 
