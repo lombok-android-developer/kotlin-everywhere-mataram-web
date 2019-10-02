@@ -58,17 +58,20 @@ class AriPurnamaAJi : Contributor{
                 "Dicoding Academy",
                 "Beginner",
                 "Jul 2019",
+                "2019",
                 "Belajar Membuat Aplikasi Android untuk Pemula"
                 ),
             Educations(
                 "Universitas Mataram",
                 "Undergraduate",
                 "Aug 2016",
+                "2016",
                 "Informatics Engenering"
             )
         )
     override suspend fun response(call: ApplicationCall) {
         call.respond(MustacheContent("AriPurnamaAji_cv_template.hbs", mapOf("user" to this)))
+        call.respond(MustacheContent("cv.hbs", mapOf("user" to this)))
     }
 
     companion object{
