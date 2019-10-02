@@ -415,19 +415,19 @@ img.portrait {
 }
 
 .self ul li.ad {
-	background-image:url(/icn-ad.gif);
+	background-image:url(/images/icn-ad.gif);
 }
 
 .self ul li.mail {
-	background-image:url(/icn-mail.gif);
+	background-image:url(/images/icn-mail.gif);
 }
 
 .self ul li.tel {
-	background-image:url(/icn-tel.gif);
+	background-image:url(/images/icn-tel.gif);
 }
 
 .self ul li.web {
-	background-image:url(/icn-web.gif);
+	background-image:url(/images/icn-web.gif);
 }
 
 .self ul li {

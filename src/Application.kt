@@ -52,34 +52,37 @@ fun Application.module(testing: Boolean = false) {
     }
 
     routing {
-//        get("/") {
-//            call.respondHtml {
-//                head { }
-//                body {
-//                    h1 { +"SELAMAT DATANG DI KOTLIN/EVERYWHERE & HACKTOBERFEST MATARAM" }
-//                    p {
-//                        +"Website ini berisi daftar kontributor dalam event Kotlin/Everywhere dan Hacktoberfest Mataram 2019"
-//                    }
-//                    p {
-//                        +"Daftar Rewards:"
-//                        ul {
-//                            li { +"Swags dari Tokopedia" }
-//                            li { +"Swags dari Lumbung Inovasi" }
-//                            li { +"Swags dari Kotlin/Everywhere Mataram" }
-//                            li { +"Swags dari Digitalocean" }
-//                        }
-//                    }
-//                    p {
-//                        +"Daftar Contributor:"
-//                        ul {
-//                            ContributorHelper?.contributors?.forEach { key, user ->
-//                                li { a("/hack/$key") { +"${user.name} - ${user.currentJob}" } }
-//                            }
-//                        }
-//                    }
-//                }
-//            }
-//        }
+        static {
+            resources("res")
+        }
+        get("/") {
+            call.respondHtml {
+                head { }
+                body {
+                    h1 { +"SELAMAT DATANG DI KOTLIN/EVERYWHERE & HACKTOBERFEST MATARAM" }
+                    p {
+                        +"Website ini berisi daftar kontributor dalam event Kotlin/Everywhere dan Hacktoberfest Mataram 2019"
+                    }
+                    p {
+                        +"Daftar Rewards:"
+                        ul {
+                            li { +"Swags dari Tokopedia" }
+                            li { +"Swags dari Lumbung Inovasi" }
+                            li { +"Swags dari Kotlin/Everywhere Mataram" }
+                            li { +"Swags dari Digitalocean" }
+                        }
+                    }
+                    p {
+                        +"Daftar Contributor:"
+                        ul {
+                            ContributorHelper?.contributors?.forEach { key, user ->
+                                li { a("/hack/$key") { +"${user.name} - ${user.currentJob}" } }
+                            }
+                        }
+                    }
+                }
+            }
+        }
         get("/") {
             call.respond(MustacheContent("index.html", mapOf("user" to "")))
         }
@@ -88,60 +91,8 @@ fun Application.module(testing: Boolean = false) {
         }
 
         // todo problem on serving static content
-        get("default.css") {
-            call.respondFile(File("resources/res/default.css"))
-        }
-
-        get("blue.css"){
-            call.respondFile(File("resources/res/css/blue.css"))
-        }
-        get("print.css"){
-            call.respondFile(File("resources/res/css/print.css"))
-        }
-        get("ie6.css"){
-            call.respondFile(File("resources/res/css/ie6.css"))
-        }
-        get("ie7.css"){
-            call.respondFile(File("resources/res/css/ie7.css"))
-        }
-        get("cufon.yui.js"){
-            call.respondFile(File("resources/res/js/cufon.yui.js"))
-        }
-        get("jquery-1.4.2.min.js"){
-            call.respondFile(File("resources/res/js/jquery-1.4.2.min.js"))
-        }
-        get("jquery.tipsy.js"){
-            call.respondFile(File("resources/res/js/jquery.tipsy.js"))
-        }
-        get("scrollTo.js"){
-            call.respondFile(File("resources/res/js/scrollTo.js"))
-        }
-        get("myriad.js"){
-            call.respondFile(File("resources/res/js/myriad.js"))
-        }
-        get("jquery.colorbox.js"){
-            call.respondFile(File("resources/res/js/jquery.colorbox.js"))
-        }
-        get("custom.js"){
-            call.respondFile(File("resources/res/js/custom.js"))
-        }
-
-        get("icn-ad.gif"){
-            call.respondFile(File("resources/res/images/icn-ad.gif"))
-        }
-
-        get("icn-mail.gif"){
-            call.respondFile(File("resources/res/images/icn-mail.gif"))
-        }
-
-        get("icn-web.gif"){
-            call.respondFile(File("resources/res/images/icn-web.gif"))
-        }
-
-        get("icn-tel.gif"){
-            call.respondFile(File("resources/res/images/icn-tel.gif"))
-        }
-
-
+//        get("default.css") {
+//            call.respondFile(File("resources/res/default.css"))
+//        }
     }
 }

@@ -10,6 +10,7 @@ import io.ktor.response.respond
 
 class AriPurnamaAJi : Contributor{
     val telepone:String get() = "+6283-1898-82173"
+    val facebookUrl:String get() = "https://www.facebook.com/ali.sangfighter"
     override val idGithub: String
         get() = "@ariaji25"
     override val name: String
@@ -42,7 +43,7 @@ class AriPurnamaAJi : Contributor{
             Skills("Android Kotlin")
         )
     override val location: String?
-        get() = "Mataram, Nusa Tenggara Barat, Indonesia"
+        get() = "Mataram, Indonesia"
     override val jobHistory: List<Jobs>?
         get() = listOf(
             Jobs(
