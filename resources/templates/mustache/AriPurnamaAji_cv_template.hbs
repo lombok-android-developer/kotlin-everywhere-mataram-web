@@ -1,0 +1,423 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Resume</title>
+    <link type="text/css" rel="stylesheet" href="/blue.css" />
+    <link type="text/css" rel="stylesheet" href="/print.css" media="print"/>
+    <!--[if IE 7]>
+    <link href="/ie7.css" rel="stylesheet" type="text/css" />
+    <![endif]-->
+    <!--[if IE 6]>
+    <link href="/ie6.css" rel="stylesheet" type="text/css" />
+    <![endif]-->
+    <style>
+        body {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	background-color: white;
+	font-size:13pt;
+	line-height: 17pt;
+}
+
+.clear {
+	clear:both;
+}
+
+a, a:hover, a:visited, a:active {
+	color:#7b90b5;
+	text-decoration: none;
+}
+
+#wrapper, .wrapper-mid {
+	background: none;
+}
+
+.wrapper-top, .wrapper-bottom  {
+	display:none;
+}
+
+#paper {
+	width:820px;
+	margin:0 auto;
+}
+
+.paper-top, .paper-bottom {
+	display:none;
+}
+
+#paper-mid {
+	width:820px;
+	margin:0 auto;
+	background-color:#FFF;
+	display:block;
+	padding:0;
+	overflow: hidden;
+	padding-bottom:75px;
+	padding-top:7px;
+}
+
+.entry {
+	width:820px;
+	display: block;
+	padding-top:55px;
+	clear: both;
+}
+
+h1 {
+	width:500px;
+	font-size:42pt;
+	color:#1b4491;
+	margin-bottom:0;
+}
+
+h1 span {
+	font-size:21pt;
+	display:block;
+	margin-left:15px;
+	margin-top:20px;
+	color:#1b4491;
+}
+
+h2 {
+	width:180px;
+	height: 23px;
+	text-align: right;
+	float:left;
+	padding:0;
+	margin:0;
+	clear:both;
+	font-size:22pt;
+	margin-bottom:-12px;
+	color:#1b4491;
+}
+
+p {
+	width:600px;
+	margin-left:40px;
+	float:right;
+}
+
+ul.list {
+	clear: both;
+	padding:0;
+	margin:0;
+	overflow: hidden;
+}
+
+ul.list li {
+	display:block;
+	float:right;
+	padding-top:32px;
+}
+
+
+h3 {
+	width:180px;
+	text-align: right;
+	float:left;
+	padding:0;
+	clear:both;
+	font-size: 13pt;
+	color:black;
+}
+
+em {
+	font-family: Georgia, "Times New Roman", serif;
+	font-style: italic;
+	color:#999;
+	font-size:12pt;
+	display: block;
+	padding-top:0;
+}
+
+ul.info {
+	float:right;
+	width:600px;
+	margin-left:40px;
+	background: none;
+	list-style: square;
+
+}
+
+ul.info li {
+	margin:0;
+	padding:0;
+	float:left;
+	display: block;
+	width:600px;
+	padding-left:0;
+	background-position: 0 .5em;
+	margin-top:12px;
+	list-style-type: square;
+}
+
+ul.skills {
+	margin:0;
+	padding:0;
+	float:right;
+	width:600px;
+	margin-left:40px;
+	margin-top:-6px;
+	background: none;
+	list-style: square;
+}
+
+ul.skills li {
+	margin:0;
+	padding:0;
+	float:left;
+	width:176px;
+	padding-left:0;
+	background-position: 0 .5em;
+	margin-top:6px;
+}
+
+img.portrait {
+	border:1px solid #000;
+	padding:10px;
+}
+
+.self {
+	width:500px;
+	float:left;
+	padding-top:11px;
+	margin-left:0;
+	margin-bottom:15px;
+	margin-left:38px;
+}
+
+.self ul {
+	padding-top: 10px;
+}
+
+.self ul li {
+	background-repeat: no-repeat;
+	padding-left:1.5;
+	background-position: 0 .1em;
+	height:25px;
+	display:block;
+	margin-top:-2px;
+}
+
+.social {
+	display:none;
+}
+
+/* ELEMENTS */
+/* ----------------------------------------- */
+
+table {
+	width: 590px;
+	margin-left:40px;
+	float:right;
+	border-collapse: collapse;
+	border-bottom:1px dashed #999;
+	border-top:1px dashed #999;
+}
+
+table td {
+	padding: 10px;
+	padding-top:0;
+	border-right:1px dashed #999;
+}
+
+table td:hover {
+	background-color: #f2f2f2;
+}
+
+table th {
+	padding: 10px;
+	padding-top:0;
+	color:#7b90b5;
+	text-align: left;
+	border-right:1px dashed #999;
+}
+
+table td.center {
+	text-align: center;
+}
+
+table td.last {
+	background: none;
+}
+
+table th.center {
+	text-align: center;
+}
+
+table th.last {
+	background: none;
+}
+
+table tr {
+	border-left:1px dashed #999;
+	border-top:1px dashed #999;
+}
+
+table tr.caption {
+	border-left:1px dashed #999;
+}
+
+blockquote {
+	border-left:3px solid #7b90b5;
+	padding-left:8px;
+	margin-top:20px;
+	width:585px;
+	margin-left:40px;
+	float:right;
+}
+
+pre {
+	width:500px;
+	margin-left:40px;
+	float:right;
+}
+
+abbr, acronym {
+	border-bottom:1px dashed #7b90b5;
+}
+
+strong {
+	font-weight: bold;
+}
+
+small {
+	font-size:70%;
+}
+
+big {
+	font-size:1.2em;
+}
+
+/* GO TO TOP */
+/* ----------------------------------------- */
+
+#message {
+	display:none;
+}
+
+.works {
+	display:none;
+}
+    </style>
+    <script type="text/javascript" src="/jquery-1.4.2.min.js"></script>
+    <script type="text/javascript" src="/jquery.tipsy.js"></script>
+    <script type="text/javascript" src="/cufon.yui.js"></script>
+    <script type="text/javascript" src="/scrollTo.js"></script>
+    <script type="text/javascript" src="/myriad.js"></script>
+    <script type="text/javascript" src="/jquery.colorbox.js"></script>
+    <script type="text/javascript" src="/custom.js"></script>
+    <script type="text/javascript">
+		Cufon.replace('h1,h2');
+</script>
+</head>
+<body>
+<!-- Begin Wrapper -->
+<div id="wrapper">
+    <div class="wrapper-top"></div>
+    <div class="wrapper-mid">
+        <!-- Begin Paper -->
+        <div id="paper">
+            <div class="paper-top"></div>
+            <div id="paper-mid">
+                <div class="entry">
+                    <!-- Begin Image -->
+                    <img class="portrait" src="{{user.photoUrl}}" alt="John Smith" />
+                    <!-- End Image -->
+                    <!-- Begin Personal Information -->
+                    <div class="self">
+                        <h1 class="name">{{user.name}} <br />
+                            <span>{{user.currentJob}}</span></h1>
+                        <ul>
+                            <li class="ad">{{user.location}}</li>
+                            <li class="mail">{{user.email}}</li>
+                            <li class="tel">{{user.telepone}}</li>
+                            <li class="web">{{user.linkedin}}</li>
+                        </ul>
+                    </div>
+                    <!-- End Personal Information -->
+                    <!-- Begin Social -->
+<!--                    <div class="social">-->
+<!--                        <ul>-->
+<!--                            <li><a class='north' href="#" title="Download .pdf"><img src="images/icn-save.jpg" alt="Download the pdf version" /></a></li>-->
+<!--                            <li><a class='north' href="javascript:window.print()" title="Print"><img src="images/icn-print.jpg" alt="" /></a></li>-->
+<!--                            <li><a class='north' id="contact" href="contact/index.html" title="Contact Me"><img src="images/icn-contact.jpg" alt="" /></a></li>-->
+<!--                            <li><a class='north' href="#" title="Follow me on Twitter"><img src="images/icn-twitter.jpg" alt="" /></a></li>-->
+<!--                            <li><a class='north' href="#" title="My Facebook Profile"><img src="images/icn-facebook.jpg" alt="" /></a></li>-->
+<!--                        </ul>-->
+<!--                    </div>-->
+                    <!-- End Social -->
+                </div>
+                <!-- Begin 1st Row -->
+                <div class="entry">
+                    <h2>OBJECTIVE</h2>
+                    <p>{{user.descriptions}}</p>
+                </div>
+                <!-- End 1st Row -->
+                <!-- Begin 2nd Row -->
+                <div class="entry">
+                    <h2>EDUCATION</h2>
+                    {{#user.educations}}
+                    <div class="content">
+                            <h3>{{years}}</h3>
+                            <p>{{institution}}<br />
+                                <em>{{grade}}</em></p>
+                    </div>
+                    {{/user.educations}}
+                </div>
+                <!-- End 2nd Row -->
+                <!-- Begin 3rd Row -->
+                <div class="entry">
+                    <h2>EXPERIENCE</h2>
+                    {{#user.jobHistory}}
+                        <div class="content">
+                            <h3>{{startYears}} - {{endYears}}</h3>
+                            <p>{{company}} <br />
+                                <em>{{position}}</em></p>
+                            <ul class="info">
+                                <li>{{jobDesc}}</li>
+                            </ul>
+                        </div>
+                    {{/user.jobHistory}}
+                </div>
+                <!-- End 3rd Row -->
+                <!-- Begin 4th Row -->
+                <div class="entry">
+                    <h2>SKILLS</h2>
+                    <div class="content">
+                        <h3>Languages / Frameworks</h3>
+                        {{#user.skillset}}
+                            <ul class="skills">
+                                <li>{{name}}</li>
+                            </ul>
+                        {{/user.skillset}}
+                    </div>
+                </div>
+                <!-- End 4th Row -->
+                <!-- Begin 5th Row -->
+<!--                <div class="entry">-->
+<!--                    <h2>WORKS</h2>-->
+<!--                    <ul class="works">-->
+<!--                        <li><a href="images/1.jpg" rel="gallery" title="Lorem ipsum dolor sit amet."><img src="images/image.jpg" alt="" /></a></li>-->
+<!--                        <li><a href="images/2.jpg" rel="gallery" title="Lorem ipsum dolor sit amet."><img src="images/image.jpg" alt="" /></a></li>-->
+<!--                        <li><a href="images/3.jpg" rel="gallery" title="Lorem ipsum dolor sit amet."><img src="images/image.jpg" alt="" /></a></li>-->
+<!--                        <li><a href="images/1.jpg" rel="gallery" title="Lorem ipsum dolor sit amet."><img src="images/image.jpg" alt="" /></a></li>-->
+<!--                        <li><a href="images/2.jpg" rel="gallery" title="Lorem ipsum dolor sit amet."><img src="images/image.jpg" alt="" /></a></li>-->
+<!--                        <li><a href="images/3.jpg" rel="gallery" title="Lorem ipsum dolor sit amet."><img src="images/image.jpg" alt="" /></a></li>-->
+<!--                        <li><a href="images/1.jpg" rel="gallery" title="Lorem ipsum dolor sit amet."><img src="images/image.jpg" alt="" /></a></li>-->
+<!--                        <li><a href="images/1.jpg" rel="gallery" title="Lorem ipsum dolor sit amet."><img src="images/image.jpg" alt="" /></a></li>-->
+<!--                    </ul>-->
+<!--                </div>-->
+                <!-- Begin 5th Row -->
+            </div>
+            <div class="clear"></div>
+            <div class="paper-bottom"></div>
+        </div>
+        <!-- End Paper -->
+    </div>
+    <div class="wrapper-bottom"></div>
+</div>
+<div id="message"><a href="#top" id="top-link">Go to Top</a></div>
+<!-- End Wrapper -->
+</body>
+</html>

@@ -2,6 +2,7 @@ package com.linov.community
 
 import com.github.mustachejava.DefaultMustacheFactory
 import freemarker.cache.ClassTemplateLoader
+import freemarker.cache.TemplateLoader
 import io.ktor.application.Application
 import io.ktor.application.call
 import io.ktor.application.install
@@ -31,7 +32,7 @@ fun main(args: Array<String>): Unit = io.ktor.server.netty.EngineMain.main(args)
 @kotlin.jvm.JvmOverloads
 fun Application.module(testing: Boolean = false) {
     install(FreeMarker) {
-        templateLoader = ClassTemplateLoader(this::class.java.classLoader, "templates")
+        templateLoader = ClassTemplateLoader(this::class.java.classLoader, "templates") as TemplateLoader?
     }
 
     install(Mustache) {
@@ -80,7 +81,7 @@ fun Application.module(testing: Boolean = false) {
 //            }
 //        }
         get("/") {
-            call.respond(MustacheContent("index.hbs", mapOf("user" to "")))
+            call.respond(MustacheContent("index.html", mapOf("user" to "")))
         }
         get("/hack/{id}") {
             ContributorHelper.response(call)
@@ -90,6 +91,57 @@ fun Application.module(testing: Boolean = false) {
         get("default.css") {
             call.respondFile(File("resources/res/default.css"))
         }
+
+        get("blue.css"){
+            call.respondFile(File("resources/res/css/blue.css"))
+        }
+        get("print.css"){
+            call.respondFile(File("resources/res/css/print.css"))
+        }
+        get("ie6.css"){
+            call.respondFile(File("resources/res/css/ie6.css"))
+        }
+        get("ie7.css"){
+            call.respondFile(File("resources/res/css/ie7.css"))
+        }
+        get("cufon.yui.js"){
+            call.respondFile(File("resources/res/js/cufon.yui.js"))
+        }
+        get("jquery-1.4.2.min.js"){
+            call.respondFile(File("resources/res/js/jquery-1.4.2.min.js"))
+        }
+        get("jquery.tipsy.js"){
+            call.respondFile(File("resources/res/js/jquery.tipsy.js"))
+        }
+        get("scrollTo.js"){
+            call.respondFile(File("resources/res/js/scrollTo.js"))
+        }
+        get("myriad.js"){
+            call.respondFile(File("resources/res/js/myriad.js"))
+        }
+        get("jquery.colorbox.js"){
+            call.respondFile(File("resources/res/js/jquery.colorbox.js"))
+        }
+        get("custom.js"){
+            call.respondFile(File("resources/res/js/custom.js"))
+        }
+
+        get("icn-ad.gif"){
+            call.respondFile(File("resources/res/images/icn-ad.gif"))
+        }
+
+        get("icn-mail.gif"){
+            call.respondFile(File("resources/res/images/icn-mail.gif"))
+        }
+
+        get("icn-web.gif"){
+            call.respondFile(File("resources/res/images/icn-web.gif"))
+        }
+
+        get("icn-tel.gif"){
+            call.respondFile(File("resources/res/images/icn-tel.gif"))
+        }
+
 
     }
 }
