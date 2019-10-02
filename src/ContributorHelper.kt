@@ -20,7 +20,6 @@ object ContributorHelper {
 
     suspend fun response(call: ApplicationCall) {
         val id = call.parameters["id"]
-        println(id)
         contributors[id]?.response(call)
     }
 }
