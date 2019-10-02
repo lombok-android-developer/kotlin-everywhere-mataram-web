@@ -16,7 +16,7 @@ class Anwar907 : Contributor {
     override val photoUrl: String?
         get() = "https://avatars0.githubusercontent.com/u/35429445?s=460&v=4"
     override val currentJob: String?
-        get() = "Rental Ungu"
+        get() = "Rental Ungu Komputer"
     override val email: String?
         get() = "rilltheend@gmail.com"
     override val descriptions: String?
