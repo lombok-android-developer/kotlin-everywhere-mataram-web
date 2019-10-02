@@ -10,18 +10,14 @@ import io.ktor.features.ContentNegotiation
 import io.ktor.freemarker.FreeMarker
 import io.ktor.gson.gson
 import io.ktor.html.respondHtml
-import io.ktor.http.ContentType
-import io.ktor.http.content.*
+import io.ktor.http.content.resources
+import io.ktor.http.content.static
 import io.ktor.mustache.Mustache
-import io.ktor.mustache.MustacheContent
-import io.ktor.response.respond
-import io.ktor.response.respondFile
 import io.ktor.routing.get
 import io.ktor.routing.routing
 import io.ktor.thymeleaf.Thymeleaf
 import kotlinx.html.*
 import org.thymeleaf.templateresolver.ClassLoaderTemplateResolver
-import java.io.File
 
 /**
  * DILARANG MENGUBAH FILE INI!!!
@@ -89,7 +85,6 @@ fun Application.module(testing: Boolean = false) {
         get("/hack/{id}") {
             ContributorHelper.response(call)
         }
-
         // todo problem on serving static content
 //        get("default.css") {
 //            call.respondFile(File("resources/res/default.css"))
