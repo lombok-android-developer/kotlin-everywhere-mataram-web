@@ -40,7 +40,7 @@ class Anwar907 : Contributor {
             Skills("Bootsrap")
         )
     override val location: String?
-        get() = "Mataram"
+        get() = "Mataram Lombok NTB"
     override val jobHistory: List<Jobs>?
         get() = listOf(
             Jobs(
