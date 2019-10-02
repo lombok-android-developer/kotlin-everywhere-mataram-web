@@ -53,15 +53,7 @@ class GustiCahya : Contributor {
     override val location: String?
         get() = "Mataram"
     override val jobHistory: List<Jobs>?
-        get() = listOf(
-            Jobs(
-                "Rekayasa Perangkat Lunak",
-                "SMKN 2 Mataram",
-                "Pelajar",
-                "2018",
-                "on-going"
-            )
-        )
+        get() = null
     override val educations: List<Educations>?
         get() = listOf(
             Educations(
@@ -78,9 +70,7 @@ class GustiCahya : Contributor {
 
     companion object {
         fun initialize(map: MutableMap<String, Contributor>) {
-            map["GustiCahya"] = GustiCahya()
             map["gusticahya"] = GustiCahya()
-            map["gusti"] = GustiCahya()
         }
     }
 }
