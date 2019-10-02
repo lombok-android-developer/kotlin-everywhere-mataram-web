@@ -8,6 +8,8 @@ import io.ktor.application.install
 import io.ktor.features.ContentNegotiation
 import io.ktor.freemarker.FreeMarker
 import io.ktor.gson.gson
+
+
 import io.ktor.http.content.resources
 import io.ktor.http.content.static
 import io.ktor.mustache.Mustache
@@ -53,16 +55,10 @@ fun Application.module(testing: Boolean = false) {
 
         get("/") {
             call.respond(
-                MustacheContent(
-                    "index.html",
-                    mapOf("contributors" to ContributorHelper
-                        .contributors.entries
-                        .groupBy { it.value.email }
-                        .map { it.value.first().key to it.value.first().value }.toList()
-                    )
-                )
+                MustacheContent("index.html", mapOf("contributors" to ContributorHelper.mapIdToContributor()))
             )
         }
+
         get("/hack/{id}") {
             ContributorHelper.response(call)
         }

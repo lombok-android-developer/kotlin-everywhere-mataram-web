@@ -5,6 +5,7 @@ import io.ktor.application.ApplicationCall
 
 object ContributorHelper {
     var contributors: MutableMap<String, Contributor> = mutableMapOf()
+
     init {
         contributors.apply {
             HayiNukman.initialize(this)
@@ -22,5 +23,9 @@ object ContributorHelper {
         val id = call.parameters["id"]
         contributors[id]?.response(call)
     }
+
+    fun mapIdToContributor() = contributors.entries
+        .groupBy { it.value.email }
+        .map { it.value.first().key to it.value.first().value }.toList()
 }
 
