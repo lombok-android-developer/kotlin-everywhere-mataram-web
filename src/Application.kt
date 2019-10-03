@@ -9,14 +9,16 @@ import io.ktor.application.install
 import io.ktor.features.ContentNegotiation
 import io.ktor.freemarker.FreeMarker
 import io.ktor.gson.gson
-import io.ktor.html.respondHtml
+
+
 import io.ktor.http.content.resources
 import io.ktor.http.content.static
 import io.ktor.mustache.Mustache
+import io.ktor.mustache.MustacheContent
+import io.ktor.response.respond
 import io.ktor.routing.get
 import io.ktor.routing.routing
 import io.ktor.thymeleaf.Thymeleaf
-import kotlinx.html.*
 import org.thymeleaf.templateresolver.ClassLoaderTemplateResolver
 
 /**
@@ -80,8 +82,11 @@ fun Application.module(testing: Boolean = false) {
             }
         }
         get("/") {
-            call.respond(MustacheContent("index.html", mapOf("user" to "")))
+            call.respond(
+                MustacheContent("index.html", mapOf("contributors" to ContributorHelper.mapIdToContributor()))
+            )
         }
+      
         get("/hack/{id}") {
             ContributorHelper.response(call)
         }
