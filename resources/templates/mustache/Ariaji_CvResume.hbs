@@ -134,6 +134,19 @@
     <!-- Education
     ----------------------------------------------- -->
     <div class="row education">
+        <div class="three columns header-col">
+            <h1><span>Current Job</span></h1>
+        </div>
+
+        <div class="nine columns main-col">
+                <div class="row item">
+                    <div class="twelve columns">
+                        <h3>{{user.currentJob}}</h3>
+                    </div>
+                </div> <!-- item end -->
+        </div> <!-- main-col end -->
+    </div> <!-- End Education -->
+    <div class="row education">
 
         <div class="three columns header-col">
             <h1><span>Education</span></h1>
@@ -145,7 +158,7 @@
 
                     <div class="twelve columns">
 
-                        <h3>{{insitution}}</h3>
+                        <h3>{{institution}}</h3>
                         <p class="info">{{grade}}<span>&bull;</span> <em class="date">{{years}}</em></p>
 
                         <p>{{descriptions}}
@@ -175,7 +188,7 @@
                     <div class="twelve columns">
 
                         <h3>{{company}}</h3>
-                        <p class="info">{{company}}<span>&bull;</span> <em class="date">{{startYears}} - {{endYears}}</em></p>
+                        <p class="info">{{position}}<span>&bull;</span> <em class="date">{{startYears}} - {{endYears}}</em></p>
 
                         <p>{{jobDesc}}</p>
 
