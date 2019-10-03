@@ -54,39 +54,11 @@ fun Application.module(testing: Boolean = false) {
             resources("res")
         }
         get("/") {
-            call.respondHtml {
-                head { }
-                body {
-                    h1 { +"SELAMAT DATANG DI KOTLIN/EVERYWHERE & HACKTOBERFEST MATARAM" }
-                    p {
-                        +"Website ini berisi daftar kontributor dalam event Kotlin/Everywhere dan Hacktoberfest Mataram 2019"
-                    }
-                    p {
-                        +"Daftar Rewards:"
-                        ul {
-                            li { +"Swags dari Tokopedia" }
-                            li { +"Swags dari Lumbung Inovasi" }
-                            li { +"Swags dari Kotlin/Everywhere Mataram" }
-                            li { +"Swags dari Digitalocean" }
-                        }
-                    }
-                    p {
-                        +"Daftar Contributor:"
-                        ul {
-                            ContributorHelper?.contributors?.forEach { key, user ->
-                                li { a("/hack/$key") { +"${user.name} - ${user.currentJob}" } }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-        get("/") {
             call.respond(
                 MustacheContent("index.html", mapOf("contributors" to ContributorHelper.mapIdToContributor()))
             )
         }
-      
+
         get("/hack/{id}") {
             ContributorHelper.response(call)
         }
