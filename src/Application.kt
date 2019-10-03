@@ -9,18 +9,14 @@ import io.ktor.features.ContentNegotiation
 import io.ktor.freemarker.FreeMarker
 import io.ktor.gson.gson
 import io.ktor.html.respondHtml
-import io.ktor.http.ContentType
-import io.ktor.http.content.*
+import io.ktor.http.content.resources
+import io.ktor.http.content.static
 import io.ktor.mustache.Mustache
-import io.ktor.mustache.MustacheContent
-import io.ktor.response.respond
-import io.ktor.response.respondFile
 import io.ktor.routing.get
 import io.ktor.routing.routing
 import io.ktor.thymeleaf.Thymeleaf
 import kotlinx.html.*
 import org.thymeleaf.templateresolver.ClassLoaderTemplateResolver
-import java.io.File
 
 /**
  * DILARANG MENGUBAH FILE INI!!!
@@ -51,45 +47,47 @@ fun Application.module(testing: Boolean = false) {
     }
 
     routing {
-//        get("/") {
-//            call.respondHtml {
-//                head { }
-//                body {
-//                    h1 { +"SELAMAT DATANG DI KOTLIN/EVERYWHERE & HACKTOBERFEST MATARAM" }
-//                    p {
-//                        +"Website ini berisi daftar kontributor dalam event Kotlin/Everywhere dan Hacktoberfest Mataram 2019"
-//                    }
-//                    p {
-//                        +"Daftar Rewards:"
-//                        ul {
-//                            li { +"Swags dari Tokopedia" }
-//                            li { +"Swags dari Lumbung Inovasi" }
-//                            li { +"Swags dari Kotlin/Everywhere Mataram" }
-//                            li { +"Swags dari Digitalocean" }
-//                        }
-//                    }
-//                    p {
-//                        +"Daftar Contributor:"
-//                        ul {
-//                            ContributorHelper?.contributors?.forEach { key, user ->
-//                                li { a("/hack/$key") { +"${user.name} - ${user.currentJob}" } }
-//                            }
-//                        }
-//                    }
-//                }
-//            }
-//        }
-        get("/") {
-            call.respond(MustacheContent("index.hbs", mapOf("user" to "")))
+        static {
+            resources("res")
         }
+
+        get("/") {
+            call.respondHtml {
+                head { }
+                body {
+                    h1 { +"SELAMAT DATANG DI KOTLIN/EVERYWHERE & HACKTOBERFEST MATARAM" }
+                    p {
+                        +"Website ini berisi daftar kontributor dalam event Kotlin/Everywhere dan Hacktoberfest Mataram 2019"
+                    }
+                    p {
+                        +"Daftar Rewards:"
+                        ul {
+                            li { +"Swags dari Tokopedia" }
+                            li { +"Swags dari Lumbung Inovasi" }
+                            li { +"Swags dari Kotlin/Everywhere Mataram" }
+                            li { +"Swags dari Digitalocean" }
+                        }
+                    }
+                    p {
+                        +"Daftar Contributor:"
+                        ul {
+                            ContributorHelper?.contributors?.entries?.associate { (k, v) ->
+                                v.name to (k to v)
+                            }?.forEach { t, u ->
+                                li { a("/hack/${u?.first}") { +"${t} - ${u?.second?.currentJob}" } }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        // todo BOUNTY issues, change index layout see issue list
+//        get("/") {
+//            call.respond(MustacheContent("index.hbs", mapOf("user" to "")))
+//        }
         get("/hack/{id}") {
             ContributorHelper.response(call)
         }
-
-        // todo problem on serving static content
-        get("default.css") {
-            call.respondFile(File("resources/res/default.css"))
-        }
-
     }
 }
