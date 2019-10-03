@@ -17,6 +17,14 @@ group 'com.linov.community'
 version '0.0.1'
 mainClassName = "io.ktor.server.netty.EngineMain"
 
+task stage(dependsOn: ['build', 'clean'])
+build.mustRunAfter clean
+
+
+test {
+    exclude '**/*'
+}
+
 shadowJar {
     manifest {
         attributes 'Main-Class': mainClassName
