@@ -9,6 +9,9 @@ import io.ktor.mustache.MustacheContent
 import io.ktor.response.respond
 
 class AriPurnamaAJi : Contributor{
+    val telepone:String get() = "+6283-1898-82173"
+    val facebookUrl:String get() = "https://www.facebook.com/ali.sangfighter"
+    val intagramId:String get() = "@ari_aji25"
     override val idGithub: String
         get() = "@ariaji25"
     override val name: String
@@ -20,7 +23,7 @@ class AriPurnamaAJi : Contributor{
     override val email: String?
         get() = "ari.purnama838@gmail.com"
     override val descriptions: String?
-        get() = "I am Junior Developer, I am satart Join into Android Development on 2019 start with Java Android, and Flutter for Mobile.\n " +
+        get() = "I am Junior Developer, I am start to Join into Android Development on 2019 start with Java Android, and Flutter for Mobile.\n " +
                 "After that I am join into Lumbung Inovasi to get more experience, and I join every project that I can to work with Android Development "
     override val linkedin: String?
         get() = "https://www.linkedin.com/in/ari-aji-29208b180/"
@@ -41,32 +44,32 @@ class AriPurnamaAJi : Contributor{
             Skills("Android Kotlin")
         )
     override val location: String?
-        get() = "Mataram, Nusa Tenggara Barat, Indonesia"
+        get() = "Mataram, Indonesia"
     override val jobHistory: List<Jobs>?
         get() = listOf(
             Jobs(
                 "Android Developer",
                 "Lumbung Inovasi",
-                "join every project that I can work for Android Development",
-                "2019",
-                "-")
+                "Join every project that I can work for Android Development",
+                "Jan 2019","Present")
         )
     override val educations: List<Educations>?
         get() = listOf(
             Educations(
                 "Dicoding Academy",
                 "Beginner",
-                "2019",
+                "Jul 2019",
                 "Belajar Membuat Aplikasi Android untuk Pemula"
                 ),
             Educations(
                 "Universitas Mataram",
                 "Undergraduate",
-                "2016",
+                "Aug 2016",
                 "Informatics Engenering"
             )
         )
     override suspend fun response(call: ApplicationCall) {
+        call.respond(MustacheContent("Ariaji_CvResume.hbs", mapOf("user" to this)))
         call.respond(MustacheContent("cv.hbs", mapOf("user" to this)))
     }
 
