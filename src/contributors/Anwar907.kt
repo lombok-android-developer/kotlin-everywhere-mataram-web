@@ -49,7 +49,7 @@ class Anwar907 : Contributor {
     override val jobHistory: List<Jobs>?
         get() = listOf(
             Jobs(
-                "Staff",
+                "Staff PKL",
                 "UD. GLOBAL TEKNIK",
                 "Tukang Service",
                 "2013",
@@ -80,6 +80,31 @@ class Anwar907 : Contributor {
     override val educations: List<Educations>?
         get() = listOf(
             Educations(
+                "Kulem State Elementary School",
+                "Graduate",
+                "2009",
+                ""
+
+            ),
+            Educations(
+                "Third Junior High School Plus YANMU NM Praya",
+                "Graduate",
+                "2012",
+                "Englsih camp"
+            ),
+            Educations(
+              "Vocational High School of Two Praya Tengah",
+                "Graduate",
+                "2015",
+                "Audio and Video editing, electronic service"
+            ),
+            Educations(
+                "Universitas Mataram",
+                "Undergraduate",
+                "2015",
+                "Electrical Engineering focus on informatics Engineering"
+            ),
+            Educations(
                 "Udacity",
                 "Beginner",
                 "2019",
@@ -96,12 +121,6 @@ class Anwar907 : Contributor {
                 "Beginner",
                 "2018",
                 "Kelas Android untuk pemula"
-            ),
-            Educations(
-                "Universitas Mataram",
-                "S1",
-                "2015",
-                "Electrical Engineering"
             )
         )
 
