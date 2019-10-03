@@ -32,15 +32,16 @@ class Anwar907 : Contributor {
             Skills("Kotlin"),
             Skills("Flutter"),
             Skills("Java"),
-            Skills("C++"),
             Skills("Potoshop"),
             Skills("CorelDraw"),
             Skills("Android Development"),
             Skills("CSS"),
-            Skills("Bootsrap")
+            Skills("Bootsrap"),
+            Skills("HTML5"),
+            Skills("Dart")
         )
     override val location: String?
-        get() = "Mataram Lombok NTB"
+        get() = "Lombok NTB"
     override val jobHistory: List<Jobs>?
         get() = listOf(
             Jobs(
@@ -78,7 +79,13 @@ class Anwar907 : Contributor {
                 "Udacity",
                 "Beginner",
                 "2019",
-                "Flutter for Beginner"
+                "Build Native Mobile Apps with Flutter"
+            ),
+            Educations(
+                "Udemy",
+                "Beginner",
+                "2019",
+                "Learn Dart Programming for Flutter"
             ),
             Educations(
                 "Dicoding Academy",
@@ -90,7 +97,7 @@ class Anwar907 : Contributor {
                 "Universitas Mataram",
                 "S1",
                 "2015",
-                "Elevtrical Engineering"
+                "Electrical Engineering"
             )
         )
 
