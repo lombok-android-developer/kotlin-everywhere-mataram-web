@@ -1,0 +1,20 @@
+.counter_box{
+  text-align: left;
+  margin: 25px 0;
+  padding: 15px 5px;
+  span,.counter{
+    font-size: 48px;
+    display: inline-block;
+    margin: 0;
+    color: $color-primary;
+    font-weight: 600;
+  }
+  h5{
+    font-weight: 500;
+    text-transform: capitalize;
+    margin: 0;
+    font-size: 14px;
+    color: $color-black;
+    margin-top: 15px;
+  }
+}
