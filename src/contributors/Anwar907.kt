@@ -72,7 +72,7 @@ class Anwar907 : Contributor {
             Jobs(
                 "Android Developer",
                 "Lumbung Inovasi",
-                "Menunggu Hilal",
+                "Backup team",
                 "2018",
                 "2019"
             )
