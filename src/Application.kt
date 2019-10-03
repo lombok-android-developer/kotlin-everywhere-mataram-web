@@ -2,6 +2,7 @@ package com.linov.community
 
 import com.github.mustachejava.DefaultMustacheFactory
 import freemarker.cache.ClassTemplateLoader
+import freemarker.cache.TemplateLoader
 import io.ktor.application.Application
 import io.ktor.application.call
 import io.ktor.application.install
@@ -29,7 +30,7 @@ fun main(args: Array<String>): Unit = io.ktor.server.netty.EngineMain.main(args)
 @kotlin.jvm.JvmOverloads
 fun Application.module(testing: Boolean = false) {
     install(FreeMarker) {
-        templateLoader = ClassTemplateLoader(this::class.java.classLoader, "templates")
+        templateLoader = ClassTemplateLoader(this::class.java.classLoader, "templates") as TemplateLoader?
     }
 
     install(Mustache) {
@@ -52,7 +53,6 @@ fun Application.module(testing: Boolean = false) {
         static {
             resources("res")
         }
-
         get("/") {
             call.respond(
                 MustacheContent("index.html", mapOf("contributors" to ContributorHelper.mapIdToContributor()))
@@ -62,5 +62,9 @@ fun Application.module(testing: Boolean = false) {
         get("/hack/{id}") {
             ContributorHelper.response(call)
         }
+        // todo problem on serving static content
+//        get("default.css") {
+//            call.respondFile(File("resources/res/default.css"))
+//        }
     }
 }

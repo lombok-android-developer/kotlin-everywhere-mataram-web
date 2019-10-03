@@ -1,5 +1,8 @@
 package com.linov.community
 
+import com.linov.community.contributors.AriPurnamaAJi
+import com.linov.community.contributors.HayiNukman
+import com.linov.community.contributors.AddinGamaBertaqwa
 import com.linov.community.contributors.*
 import io.ktor.application.ApplicationCall
 
