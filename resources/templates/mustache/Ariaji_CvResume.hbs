@@ -7,7 +7,7 @@
     <!--- Basic Page Needs
     ================================================== -->
     <meta charset="utf-8">
-    <title>CV Template Hacktoberfast 2019</title>
+    <title>CV {{user.name}}</title>
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -204,7 +204,8 @@
 
                 <ul class="skills">
                     {{#user.skillset}}
-                        <li><span class="bar-expand illustrator"></span><em>{{name}}</em></li>
+                        <li><span class="bar-expand illustrator" style="width:{{expertiseRate}}%;"></span><em>{{name}}</em></li>
+<!--                        <li><span class="bar-expand illustrator"></span><em>{{name}}</em></li>-->
                     {{/user.skillset}}
                 </ul>
 
