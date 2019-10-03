@@ -57,6 +57,24 @@ class AriPurnamaAJi : Contributor{
     override val educations: List<Educations>?
         get() = listOf(
             Educations(
+                "Elementry School of Sundil",
+                "Graduate",
+                "Juli 2010",
+                ""
+            ),
+            Educations(
+                "Third Junior High School of Praya",
+                "Graduate",
+                "Juli 2013",
+                ""
+            ),
+            Educations(
+                "Vocational High School of Management Praya Tengah",
+                "Multimedia Graduated",
+                "Juli 2016",
+                "Animation Creator, Design, and Videografi"
+            ),
+            Educations(
                 "Dicoding Academy",
                 "Beginner",
                 "Jul 2019",
@@ -65,13 +83,12 @@ class AriPurnamaAJi : Contributor{
             Educations(
                 "Universitas Mataram",
                 "Undergraduate",
-                "Aug 2016",
+                "Aug 2016 - Present",
                 "Informatics Engenering"
             )
         )
     override suspend fun response(call: ApplicationCall) {
         call.respond(MustacheContent("Ariaji_CvResume.hbs", mapOf("user" to this)))
-        call.respond(MustacheContent("cv.hbs", mapOf("user" to this)))
     }
 
     companion object{
