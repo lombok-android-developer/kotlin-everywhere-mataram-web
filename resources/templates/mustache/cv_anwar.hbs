@@ -250,8 +250,8 @@
           </div>
         </div>
 				<div class="row">
+                    {{#user.skillset}}
 					<div class="col-md-6 animate-box">
-                        {{#user.skillset}}
                         <div class="progress-wrap ftco-animate">
 							<h3>{{name}}</h3>
 							<div class="progress">
@@ -260,8 +260,8 @@
 							  	</div>
 							</div>
 						</div>
-                        {{/user.skillset}}
 					</div>
+                    {{/user.skillset}}
 					<div class="col-md-6 animate-box">
 						<div class="progress-wrap ftco-animate">
 							<h3>Kotlin</h3>

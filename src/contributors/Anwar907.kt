@@ -29,16 +29,17 @@ class Anwar907 : Contributor {
         get() = "@MbunMalam"
     override val skillset: List<Skills>?
         get() = listOf(
-            Skills("Kotlin"),
-            Skills("Flutter"),
-            Skills("Java"),
-            Skills("Potoshop"),
-            Skills("CorelDraw"),
+            Skills("Kotlin", expertiseRate = 75),
+            Skills("Flutter", expertiseRate = 70),
+            Skills("Java", expertiseRate = 65),
+            Skills("Potoshop", expertiseRate = 80),
+            Skills("CorelDraw", expertiseRate = 60),
             Skills("Android Development"),
-            Skills("CSS"),
-            Skills("Bootsrap"),
-            Skills("HTML5"),
-            Skills("Dart")
+            Skills("CSS", expertiseRate = 80),
+            Skills("Bootsrap", expertiseRate = 75),
+            Skills("HTML5", expertiseRate = 80),
+            Skills("Dart", expertiseRate = 65),
+            Skills("SEO", expertiseRate = 75)
         )
     override val location: String?
         get() = "Lombok NTB"
