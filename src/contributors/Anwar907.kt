@@ -9,6 +9,9 @@ import io.ktor.mustache.MustacheContent
 import io.ktor.response.respond
 
 class Anwar907 : Contributor {
+    val pos = kodePos(83581)
+    val noHp = nope("+6285238718978")
+    val birth = tglLahir("Mei, 07, 1996")
     override val idGithub: String
         get() = "@anwar907"
     override val name: String
@@ -32,9 +35,9 @@ class Anwar907 : Contributor {
             Skills("Kotlin", expertiseRate = 75),
             Skills("Flutter", expertiseRate = 70),
             Skills("Java", expertiseRate = 65),
-            Skills("Potoshop", expertiseRate = 80),
+            Skills("Pohtoshop", expertiseRate = 80),
             Skills("CorelDraw", expertiseRate = 60),
-            Skills("Android Development"),
+            Skills("Android Development", expertiseRate = 75),
             Skills("CSS", expertiseRate = 80),
             Skills("Bootsrap", expertiseRate = 75),
             Skills("HTML5", expertiseRate = 80),
@@ -111,4 +114,25 @@ class Anwar907 : Contributor {
             map["anwar907"] = Anwar907()
         }
     }
+
+
+    class kodePos(val kode: Int){
+        override fun toString(): String {
+            return "$kode"
+        }
+    }
+
+    class tglLahir(val tgl: String?){
+        override fun toString(): String {
+            return "$tgl"
+        }
+    }
+
+    class nope(val hp: String?) {
+        override fun toString(): String {
+            return "$hp"
+        }
+    }
 }
+
+
