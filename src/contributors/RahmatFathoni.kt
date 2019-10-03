@@ -35,7 +35,7 @@ class RahmatFathoni : Contributor {
             Skills("Python"),
             Skills("JavaScript"),
             Skills("PHP"),
-            Skills("otw Flutter")
+            Skills("Flutter")
         )
     override val location: String?
         get() = "Praya"
