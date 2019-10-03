@@ -18,7 +18,7 @@ version '0.0.1'
 mainClassName = "io.ktor.server.netty.EngineMain"
 
 task stage {
-    dependsOn installDist
+    dependsOn ['build']
 }
 
 shadowJar {
