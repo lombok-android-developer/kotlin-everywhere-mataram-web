@@ -1,0 +1,53 @@
+.event_box{
+margin: 70px 0;
+  .event_info{
+    position: relative;
+    margin: 30px 0;
+    .event_title{
+      font-size: 36px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: $color-black;
+      position: relative;
+      padding: 15px 0;
+      line-height: 1.3;
+      &:before{
+        width: 30px;
+        content: " ";
+        position: absolute;
+        border-top: solid 4px #f50136;
+        left: 0;
+        top: 0;
+      }
+    }
+    .speakers{
+      strong{
+        font-size: 14px;
+        font-weight: 700;
+        color: $color-black;
+      }
+      span{
+        font-size: 14px;
+        font-weight: 400;
+      }
+    }
+    .event_date{
+      color: $color-primary;
+      font-size: 12px;
+      font-weight: 700;
+    }
+  }
+  .readmore_btn{
+    margin-top: 25px;
+    display: inline-block;
+    text-transform: uppercase;
+    text-decoration: underline;
+    line-height: 28px;
+    font-size: 12px;
+    font-weight: 700;
+    color: $color-primary;
+    &:hover{
+      color: $color-black;
+    }
+  }
+}
