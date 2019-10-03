@@ -36,7 +36,7 @@
 
 <!-- Header
 ================================================== -->
-<header id="home">
+<header id="home" style="background: #161415 url({{user.headerPhoto}}) no-repeat top center;">
 
     <nav id="nav-wrap">
 
@@ -61,10 +61,10 @@
             <hr />
             <ul class="social">
                 <li><a href="{{user.facebookUrl}}"><i class="fa fa-facebook"></i></a></li>
-                <li><a href="{{user.instagramId}}"><i class="fa fa-instagram"></i></a></li>
+                <li><a href="https://instagram.com{{user.instagramId}}"><i class="fa fa-instagram"></i></a></li>
                 <li><a href="{{user.email}}"><i class="fa fa-google-plus"></i></a></li>
                 <li><a href="{{user.linkedin}}"><i class="fa fa-linkedin"></i></a></li>
-                <li><a href="{{user.gitidGithub}}"><i class="fa fa-github"></i></a></li>
+                <li><a href="https://github.com/{{user.gitidGithub}}"><i class="fa fa-github"></i></a></li>
             </ul>
         </div>
     </div>
@@ -621,7 +621,7 @@
         <div class="eight columns">
 
             <!-- form -->
-            <form action="" method="post" id="contactForm" name="contactForm">
+            <form action="/resForAriaji/inc/sendEmail.php" method="post" id="contactForm" name="contactForm">
                 <fieldset>
 
                     <div>
@@ -645,8 +645,9 @@
                     </div>
 
                     <div>
+<!--                        <input type="submit" class="submit" id="submit" name="SUBMIT"/>-->
                         <button class="submit">Submit</button>
-                        <span id="/resForAriaji/image-loader">
+<!--                        <span id="/resForAriaji/image-loader">-->
                         <img alt="" src="/resForAriaji/images/loader.gif">
                      </span>
                     </div>
@@ -692,10 +693,10 @@
 
             <ul class="social-links">
                 <li><a href="{{user.facebookUrl}}"><i class="fa fa-facebook"></i></a></li>
-                <li><a href="{{user.instagramId}}"><i class="fa fa-instagram"></i></a></li>
+                <li><a href="https://instagram.com{{user.instagramId}}"><i class="fa fa-instagram"></i></a></li>
                 <li><a href="{{user.email}}"><i class="fa fa-google-plus"></i></a></li>
                 <li><a href="{{user.linkedin}}"><i class="fa fa-linkedin"></i></a></li>
-                <li><a href="{{user.gitidGithub}}"><i class="fa fa-github"></i></a></li>
+                <li><a href="https://github.com/{{user.gitidGithub}}"><i class="fa fa-github"></i></a></li>
             </ul>
 
 <!--            <ul class="copyright">-->
