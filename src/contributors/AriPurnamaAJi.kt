@@ -10,6 +10,7 @@ import io.ktor.response.respond
 
 class AriPurnamaAJi : Contributor{
     val telepone:String get() = "+6283-1898-82173"
+    val headerPhoto:String get() = "https://scontent.fdps5-1.fna.fbcdn.net/v/t1.0-9/43056164_2120204024867007_4139270664185970688_n.jpg?_nc_cat=103&_nc_eui2=AeET84LDCr7bso527Ti1SPwN_Cj6P4Pb_teTFCGwav0BAocxrVFUwmk3Z6zFlbQwLine9bHDM2xoMASvj7994E8GdzQN4WqyCSva_GviRsj_sw&_nc_oc=AQm9U9o0IZwMIlgnxcOKa9YN7IJaE9WXDoJbmTVuxVRwHNn93eRKR6u7617urTNGeIs&_nc_ht=scontent.fdps5-1.fna&oh=a46e5931649c91e26571d604f60e12f8&oe=5DF03231"
     val facebookUrl:String get() = "https://www.facebook.com/ali.sangfighter"
     val intagramId:String get() = "@ari_aji25"
     override val idGithub: String
@@ -33,15 +34,15 @@ class AriPurnamaAJi : Contributor{
         get() = "@ariaji25"
     override val skillset: List<Skills>?
         get() = listOf(
-            Skills("Java"),
-            Skills("C"),
-            Skills("C++"),
-            Skills("Python"),
-            Skills("Kotlin"),
-            Skills("PHP"),
-            Skills("Flutter for Mobile"),
-            Skills("Android Java"),
-            Skills("Android Kotlin")
+            Skills("Java", expertiseRate= 85),
+            Skills("C",  expertiseRate= 80),
+            Skills("C++",  expertiseRate= 80),
+            Skills("Python",  expertiseRate= 70),
+            Skills("Kotlin",  expertiseRate= 88),
+            Skills("PHP", expertiseRate= 60),
+            Skills("Flutter for Mobile",  expertiseRate= 85),
+            Skills("Android Java",  expertiseRate= 80),
+            Skills("Android Kotlin",  expertiseRate= 88)
         )
     override val location: String?
         get() = "Mataram, Indonesia"
@@ -56,6 +57,24 @@ class AriPurnamaAJi : Contributor{
     override val educations: List<Educations>?
         get() = listOf(
             Educations(
+                "Elementry School of Sundil",
+                "Graduate",
+                "Juli 2010",
+                ""
+            ),
+            Educations(
+                "Third Junior High School of Praya",
+                "Graduate",
+                "Juli 2013",
+                ""
+            ),
+            Educations(
+                "Vocational High School of Management Praya Tengah",
+                "Multimedia Graduated",
+                "Juli 2016",
+                "Animation Creator, Design, and Videografi"
+            ),
+            Educations(
                 "Dicoding Academy",
                 "Beginner",
                 "Jul 2019",
@@ -64,13 +83,12 @@ class AriPurnamaAJi : Contributor{
             Educations(
                 "Universitas Mataram",
                 "Undergraduate",
-                "Aug 2016",
+                "Aug 2016 - Present",
                 "Informatics Engenering"
             )
         )
     override suspend fun response(call: ApplicationCall) {
         call.respond(MustacheContent("Ariaji_CvResume.hbs", mapOf("user" to this)))
-        call.respond(MustacheContent("cv.hbs", mapOf("user" to this)))
     }
 
     companion object{

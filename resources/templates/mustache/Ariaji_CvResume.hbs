@@ -7,7 +7,7 @@
     <!--- Basic Page Needs
     ================================================== -->
     <meta charset="utf-8">
-    <title>CV Template Hacktoberfast 2019</title>
+    <title>CV {{user.name}}</title>
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -36,7 +36,7 @@
 
 <!-- Header
 ================================================== -->
-<header id="home">
+<header id="home" style="background: #161415 url({{user.headerPhoto}}) no-repeat top center;">
 
     <nav id="nav-wrap">
 
@@ -48,7 +48,7 @@
             <li><a class="smoothscroll" href="#about">About</a></li>
             <li><a class="smoothscroll" href="#resume">Resume</a></li>
 <!--            <li><a class="smoothscroll" href="#portfolio">Works</a></li>-->
-            <li><a class="smoothscroll" href="#testimonials">Testimonials</a></li>
+<!--            <li><a class="smoothscroll" href="#testimonials">Testimonials</a></li>-->
             <li><a class="smoothscroll" href="#contact">Contact</a></li>
         </ul> <!-- end #nav -->
 
@@ -61,10 +61,10 @@
             <hr />
             <ul class="social">
                 <li><a href="{{user.facebookUrl}}"><i class="fa fa-facebook"></i></a></li>
-                <li><a href="{{user.instagramId}}"><i class="fa fa-instagram"></i></a></li>
+                <li><a href="https://instagram.com{{user.instagramId}}"><i class="fa fa-instagram"></i></a></li>
                 <li><a href="{{user.email}}"><i class="fa fa-google-plus"></i></a></li>
                 <li><a href="{{user.linkedin}}"><i class="fa fa-linkedin"></i></a></li>
-                <li><a href="{{user.gitidGithub}}"><i class="fa fa-github"></i></a></li>
+                <li><a href="https://github.com/{{user.gitidGithub}}"><i class="fa fa-github"></i></a></li>
             </ul>
         </div>
     </div>
@@ -106,7 +106,6 @@
                      </span><br>
                         <span>{{user.telepone}}</span><br>
                         <span>{{user.email}}</span><br>
-                        <span>{{user.idGithub}}</span><br>
                         <span>{{user.linkedin}}</span>
                     </p>
 
@@ -134,6 +133,19 @@
     <!-- Education
     ----------------------------------------------- -->
     <div class="row education">
+        <div class="three columns header-col">
+            <h1><span>Current Job</span></h1>
+        </div>
+
+        <div class="nine columns main-col">
+                <div class="row item">
+                    <div class="twelve columns">
+                        <h3>{{user.currentJob}}</h3>
+                    </div>
+                </div> <!-- item end -->
+        </div> <!-- main-col end -->
+    </div> <!-- End Education -->
+    <div class="row education">
 
         <div class="three columns header-col">
             <h1><span>Education</span></h1>
@@ -145,7 +157,7 @@
 
                     <div class="twelve columns">
 
-                        <h3>{{insitution}}</h3>
+                        <h3>{{institution}}</h3>
                         <p class="info">{{grade}}<span>&bull;</span> <em class="date">{{years}}</em></p>
 
                         <p>{{descriptions}}
@@ -175,7 +187,7 @@
                     <div class="twelve columns">
 
                         <h3>{{company}}</h3>
-                        <p class="info">{{company}}<span>&bull;</span> <em class="date">{{startYears}} - {{endYears}}</em></p>
+                        <p class="info">{{position}}<span>&bull;</span> <em class="date">{{startYears}} - {{endYears}}</em></p>
 
                         <p>{{jobDesc}}</p>
 
@@ -204,7 +216,8 @@
 
                 <ul class="skills">
                     {{#user.skillset}}
-                        <li><span class="bar-expand illustrator"></span><em>{{name}}</em></li>
+                        <li><span class="bar-expand illustrator" style="width:{{expertiseRate}}%;"></span><em>{{name}}</em></li>
+<!--                        <li><span class="bar-expand illustrator"></span><em>{{name}}</em></li>-->
                     {{/user.skillset}}
                 </ul>
 
@@ -520,86 +533,81 @@
 <section id="call-to-action">
 
     <div class="row">
+<!--        <div class="two columns header-col">-->
 
-        <div class="two columns header-col">
+<!--            <h1><span>Get Hosting.</span></h1>-->
 
-            <h1><span>Get Hosting.</span></h1>
+<!--        </div>-->
 
-        </div>
+<!--        <div class="seven columns">-->
 
-        <div class="seven columns">
+<!--            <h2><a href="http://www.dreamhost.com/r.cgi?287326|STYLESHOUT">Host This Template on Dreamhost.</a></h2>-->
+<!--            <p>Looking for an awesome and reliable webhosting? Try <a href="http://www.dreamhost.com/r.cgi?287326|STYLESHOUT"><span>DreamHost</span></a>.-->
+<!--                Get <span>$50 off</span> when you sign up with the promocode <span>STYLESHOUT</span>.-->
+<!--                &lt;!&ndash; Simply type	the promocode in the box labeled “Promo Code” when placing your order. &ndash;&gt;</p>-->
 
-            <h2><a href="http://www.dreamhost.com/r.cgi?287326|STYLESHOUT">Host This Template on Dreamhost.</a></h2>
-            <p>Looking for an awesome and reliable webhosting? Try <a href="http://www.dreamhost.com/r.cgi?287326|STYLESHOUT"><span>DreamHost</span></a>.
-                Get <span>$50 off</span> when you sign up with the promocode <span>STYLESHOUT</span>.
-                <!-- Simply type	the promocode in the box labeled “Promo Code” when placing your order. --></p>
+<!--        </div>-->
 
-        </div>
+<!--        <div class="three columns action">-->
 
-        <div class="three columns action">
+<!--            <a href="http://www.dreamhost.com/r.cgi?287326|STYLESHOUT" class="button">Sign Up Now</a>-->
 
-            <a href="http://www.dreamhost.com/r.cgi?287326|STYLESHOUT" class="button">Sign Up Now</a>
-
-        </div>
-
+<!--        </div>-->
     </div>
 
 </section> <!-- Call-To-Action Section End-->
 
+<!--&lt;!&ndash; Testimonials Section-->
+<!--================================================== &ndash;&gt;-->
+<!--<section id="testimonials">-->
 
-<!-- Testimonials Section
-================================================== -->
-<section id="testimonials">
+<!--    <div class="text-container">-->
 
-    <div class="text-container">
+<!--        <div class="row">-->
 
-        <div class="row">
+<!--            <div class="two columns header-col">-->
 
-            <div class="two columns header-col">
+<!--                <h1><span>Client Testimonials</span></h1>-->
 
-                <h1><span>Client Testimonials</span></h1>
+<!--            </div>-->
 
-            </div>
+<!--            <div class="ten columns flex-container">-->
 
-            <div class="ten columns flex-container">
+<!--                <div class="flexslider">-->
 
-                <div class="flexslider">
+<!--                    <ul class="slides">-->
 
-                    <ul class="slides">
+<!--                        <li>-->
+<!--                            <blockquote>-->
+<!--                                <p>Your work is going to fill a large part of your life, and the only way to be truly satisfied is-->
+<!--                                    to do what you believe is great work. And the only way to do great work is to love what you do.-->
+<!--                                    If you haven't found it yet, keep looking. Don't settle. As with all matters of the heart, you'll know when you find it.-->
+<!--                                </p>-->
+<!--                                <cite>Steve Jobs</cite>-->
+<!--                            </blockquote>-->
+<!--                        </li> &lt;!&ndash; slide ends &ndash;&gt;-->
 
-                        <li>
-                            <blockquote>
-                                <p>Your work is going to fill a large part of your life, and the only way to be truly satisfied is
-                                    to do what you believe is great work. And the only way to do great work is to love what you do.
-                                    If you haven't found it yet, keep looking. Don't settle. As with all matters of the heart, you'll know when you find it.
-                                </p>
-                                <cite>Steve Jobs</cite>
-                            </blockquote>
-                        </li> <!-- slide ends -->
+<!--                        <li>-->
+<!--                            <blockquote>-->
+<!--                                <p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.-->
+<!--                                    Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem-->
+<!--                                    nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris.-->
+<!--                                </p>-->
+<!--                                <cite>Mr. Adobe</cite>-->
+<!--                            </blockquote>-->
+<!--                        </li> &lt;!&ndash; slide ends &ndash;&gt;-->
 
-                        <li>
-                            <blockquote>
-                                <p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.
-                                    Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem
-                                    nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris.
-                                </p>
-                                <cite>Mr. Adobe</cite>
-                            </blockquote>
-                        </li> <!-- slide ends -->
+<!--                    </ul>-->
 
-                    </ul>
+<!--                </div> &lt;!&ndash; div.flexslider ends &ndash;&gt;-->
 
-                </div> <!-- div.flexslider ends -->
+<!--            </div> &lt;!&ndash; div.flex-container ends &ndash;&gt;-->
 
-            </div> <!-- div.flex-container ends -->
+<!--        </div> &lt;!&ndash; row ends &ndash;&gt;-->
 
-        </div> <!-- row ends -->
+<!--    </div>  &lt;!&ndash; text-container ends &ndash;&gt;-->
 
-    </div>  <!-- text-container ends -->
-
-</section> <!-- Testimonials Section End-->
-
-
+<!--</section> &lt;!&ndash; Testimonials Section End&ndash;&gt;-->
 <!-- Contact Section
 ================================================== -->
 <section id="contact">
@@ -613,10 +621,7 @@
         </div>
 
         <div class="ten columns">
-
-            <p class="lead">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam,
-                eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
-                voluptatem quia voluptas sit aspernatur aut odit aut fugit.
+            <p class="lead">Send your support or comment to me :).
             </p>
 
         </div>
@@ -628,7 +633,7 @@
         <div class="eight columns">
 
             <!-- form -->
-            <form action="" method="post" id="contactForm" name="contactForm">
+            <form action="/resForAriaji/inc/sendEmail.php" method="post" id="contactForm" name="contactForm">
                 <fieldset>
 
                     <div>
@@ -652,8 +657,9 @@
                     </div>
 
                     <div>
+<!--                        <input type="submit" class="submit" id="submit" name="SUBMIT"/>-->
                         <button class="submit">Submit</button>
-                        <span id="/resForAriaji/image-loader">
+<!--                        <span id="/resForAriaji/image-loader">-->
                         <img alt="" src="/resForAriaji/images/loader.gif">
                      </span>
                     </div>
@@ -677,39 +683,11 @@
 
                 <h4>Address and Phone</h4>
                 <p class="address">
-                    Jonathan Doe<br>
-                    1600 Amphitheatre Parkway <br>
-                    Mountain View, CA 94043 US<br>
-                    <span>(123) 456-7890</span>
+                    {{user.name}}<br>
+                    {{user.location}}<br>
+                    <span>{{user.telepone}}</span>
                 </p>
-
             </div>
-
-            <div class="widget widget_tweets">
-
-                <h4 class="widget-title">Latest Tweets</h4>
-
-                <ul id="twitter">
-                    <li>
-                        <span>
-                        This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.
-                        Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum
-                        <a href="#">http://t.co/CGIrdxIlI3</a>
-                        </span>
-                        <b><a href="#">2 Days Ago</a></b>
-                    </li>
-                    <li>
-                        <span>
-                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam,
-                        eaque ipsa quae ab illo inventore veritatis et quasi
-                        <a href="#">http://t.co/CGIrdxIlI3</a>
-                        </span>
-                        <b><a href="#">3 Days Ago</a></b>
-                    </li>
-                </ul>
-
-            </div>
-
         </aside>
 
     </div>
@@ -726,19 +704,17 @@
         <div class="twelve columns">
 
             <ul class="social-links">
-                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                <li><a href="#"><i class="fa fa-skype"></i></a></li>
+                <li><a href="{{user.facebookUrl}}"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="https://instagram.com{{user.instagramId}}"><i class="fa fa-instagram"></i></a></li>
+                <li><a href="{{user.email}}"><i class="fa fa-google-plus"></i></a></li>
+                <li><a href="{{user.linkedin}}"><i class="fa fa-linkedin"></i></a></li>
+                <li><a href="https://github.com/{{user.gitidGithub}}"><i class="fa fa-github"></i></a></li>
             </ul>
 
-            <ul class="copyright">
-                <li>&copy; Copyright 2014 CeeVee</li>
-                <li>Design by <a title="Styleshout" href="http://www.styleshout.com/">Styleshout</a></li>
-            </ul>
+<!--            <ul class="copyright">-->
+<!--                <li>&copy; Copyright 2014 CeeVee</li>-->
+<!--                <li>Design by <a title="Styleshout" href="http://www.styleshout.com/">Styleshout</a></li>-->
+<!--            </ul>-->
 
         </div>
 
