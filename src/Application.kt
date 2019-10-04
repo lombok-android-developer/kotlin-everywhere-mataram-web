@@ -2,25 +2,24 @@ package com.linov.community
 
 import com.github.mustachejava.DefaultMustacheFactory
 import freemarker.cache.ClassTemplateLoader
+import freemarker.cache.TemplateLoader
 import io.ktor.application.Application
 import io.ktor.application.call
 import io.ktor.application.install
 import io.ktor.features.ContentNegotiation
 import io.ktor.freemarker.FreeMarker
 import io.ktor.gson.gson
-import io.ktor.html.respondHtml
-import io.ktor.http.ContentType
-import io.ktor.http.content.*
+
+
+import io.ktor.http.content.resources
+import io.ktor.http.content.static
 import io.ktor.mustache.Mustache
 import io.ktor.mustache.MustacheContent
 import io.ktor.response.respond
-import io.ktor.response.respondFile
 import io.ktor.routing.get
 import io.ktor.routing.routing
 import io.ktor.thymeleaf.Thymeleaf
-import kotlinx.html.*
 import org.thymeleaf.templateresolver.ClassLoaderTemplateResolver
-import java.io.File
 
 /**
  * DILARANG MENGUBAH FILE INI!!!
@@ -31,7 +30,7 @@ fun main(args: Array<String>): Unit = io.ktor.server.netty.EngineMain.main(args)
 @kotlin.jvm.JvmOverloads
 fun Application.module(testing: Boolean = false) {
     install(FreeMarker) {
-        templateLoader = ClassTemplateLoader(this::class.java.classLoader, "templates")
+        templateLoader = ClassTemplateLoader(this::class.java.classLoader, "templates") as TemplateLoader?
     }
 
     install(Mustache) {
@@ -49,13 +48,12 @@ fun Application.module(testing: Boolean = false) {
     install(ContentNegotiation) {
         gson { }
     }
-
     routing {
 //        get("/") {
 //            call.respondHtml {
 //                head { }
 //                body {
-//                    h1 { +"SELAMAT DATANG DI KOTLIN/EVERYWHERE & HACKTOBERFEST MATARAM" }
+//                    h1 { +"SELAMAT
 //                    p {
 //                        +"Website ini berisi daftar kontributor dalam event Kotlin/Everywhere dan Hacktoberfest Mataram 2019"
 //                    }
@@ -79,17 +77,40 @@ fun Application.module(testing: Boolean = false) {
 //                }
 //            }
 //        }
-        get("/") {
-            call.respond(MustacheContent("index.hbs", mapOf("user" to "")))
+        static {
+            resources("res")
         }
+        get("/") {
+            call.respond(
+                MustacheContent("index.html", mapOf("contributors" to ContributorHelper.mapIdToContributor()))
+            )
+        }
+
         get("/hack/{id}") {
             ContributorHelper.response(call)
         }
-
         // todo problem on serving static content
-        get("default.css") {
-            call.respondFile(File("resources/res/default.css"))
-        }
-
+//        get("default.css") {
+//            call.respondFile(File("resources/res/default.css"))
+//        }
     }
+
+//    routing {
+//        static {
+//            resources("res")
+//        }
+//        get("/") {
+//            call.respond(
+//                MustacheContent("index.html", mapOf("contributors" to ContributorHelper.mapIdToContributor()))
+//            )
+//        }
+//
+//        get("/hack/{id}") {
+//            ContributorHelper.response(call)
+//        }
+//        // todo problem on serving static content
+////        get("default.css") {
+////            call.respondFile(File("resources/res/default.css"))
+////        }
+//    }
 }

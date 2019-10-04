@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<!--[if lt IE 8 ]><html class="no-js ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="no-js ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 8)|!(IE)]><!--><html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+
+    <!--- Basic Page Needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <title>CV {{user.name}}</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Mobile Specific Metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="/resForAriaji/css/default.css">
+    <link rel="stylesheet" href="/resForAriaji/css/layout.css">
+    <link rel="stylesheet" href="/resForAriaji/css/media-queries.css">
+    <link rel="stylesheet" href="/resForAriaji/css/magnific-popup.css">
+
+    <!-- Script
+    ================================================== -->
+    <script src="/resForAriaji/js/modernizr.js"></script>
+
+    <!-- Favicons
+     ================================================== -->
+    <link rel="shortcut icon" href="favicon.png" >
+
+</head>
+
+<body>
+
+<!-- Header
+================================================== -->
+<header id="home" style="background: #161415 url({{user.headerPhoto}}) no-repeat top center;">
+
+    <nav id="nav-wrap">
+
+        <a class="mobile-btn" href="#nav-wrap" title="Show navigation">Show navigation</a>
+        <a class="mobile-btn" href="#" title="Hide navigation">Hide navigation</a>
+
+        <ul id="nav" class="nav">
+            <li class="current"><a class="smoothscroll" href="#home">Home</a></li>
+            <li><a class="smoothscroll" href="#about">About</a></li>
+            <li><a class="smoothscroll" href="#resume">Resume</a></li>
+<!--            <li><a class="smoothscroll" href="#portfolio">Works</a></li>-->
+<!--            <li><a class="smoothscroll" href="#testimonials">Testimonials</a></li>-->
+            <li><a class="smoothscroll" href="#contact">Contact</a></li>
+        </ul> <!-- end #nav -->
+
+    </nav> <!-- end #nav-wrap -->
+
+    <div class="row banner">
+        <div class="banner-text">
+            <h1 class="responsive-headline">{{user.name}}</h1>
+            <h3>{{user.descriptions}}</span>.</h3>
+            <hr />
+            <ul class="social">
+                <li><a href="{{user.facebookUrl}}"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="https://instagram.com{{user.instagramId}}"><i class="fa fa-instagram"></i></a></li>
+                <li><a href="{{user.email}}"><i class="fa fa-google-plus"></i></a></li>
+                <li><a href="{{user.linkedin}}"><i class="fa fa-linkedin"></i></a></li>
+                <li><a href="https://github.com/{{user.gitidGithub}}"><i class="fa fa-github"></i></a></li>
+            </ul>
+        </div>
+    </div>
+
+    <p class="scrolldown">
+        <a class="smoothscroll" href="#about"><i class="icon-down-circle"></i></a>
+    </p>
+
+</header> <!-- Header End -->
+
+
+<!-- About Section
+================================================== -->
+<section id="about">
+
+    <div class="row">
+
+        <div class="three columns">
+
+            <img class="profile-pic"  src="{{user.photoUrl}}" alt="" />
+
+        </div>
+
+        <div class="nine columns main-col">
+
+            <h2>About Me</h2>
+
+            <p>{{user.descriptions}}
+            </p>
+
+            <div class="row">
+
+                <div class="columns contact-details">
+
+                    <h2>Contact Details</h2>
+                    <p class="address">
+                        <span>{{user.name}}</span><br>
+                        <span>{{user.location}}<br>
+                     </span><br>
+                        <span>{{user.telepone}}</span><br>
+                        <span>{{user.email}}</span><br>
+                        <span>{{user.linkedin}}</span>
+                    </p>
+
+                </div>
+
+                <div class="columns download">
+                    <p>
+                        <a href="#" class="button"><i class="fa fa-download"></i>Download Resume</a>
+                    </p>
+                </div>
+
+            </div> <!-- end row -->
+
+        </div> <!-- end .main-col -->
+
+    </div>
+
+</section> <!-- About Section End-->
+
+
+<!-- Resume Section
+================================================== -->
+<section id="resume">
+
+    <!-- Education
+    ----------------------------------------------- -->
+    <div class="row education">
+        <div class="three columns header-col">
+            <h1><span>Current Job</span></h1>
+        </div>
+
+        <div class="nine columns main-col">
+                <div class="row item">
+                    <div class="twelve columns">
+                        <h3>{{user.currentJob}}</h3>
+                    </div>
+                </div> <!-- item end -->
+        </div> <!-- main-col end -->
+    </div> <!-- End Education -->
+    <div class="row education">
+
+        <div class="three columns header-col">
+            <h1><span>Education</span></h1>
+        </div>
+
+        <div class="nine columns main-col">
+            {{#user.educations}}
+                <div class="row item">
+
+                    <div class="twelve columns">
+
+                        <h3>{{institution}}</h3>
+                        <p class="info">{{grade}}<span>&bull;</span> <em class="date">{{years}}</em></p>
+
+                        <p>{{descriptions}}
+                        </p>
+
+                    </div>
+
+                </div> <!-- item end -->
+            {{/user.educations}}
+        </div> <!-- main-col end -->
+
+    </div> <!-- End Education -->
+
+
+    <!-- Work
+    ----------------------------------------------- -->
+    <div class="row work">
+
+        <div class="three columns header-col">
+            <h1><span>Work</span></h1>
+        </div>
+
+        <div class="nine columns main-col">
+            {{#user.jobHistory}}
+                <div class="row item">
+
+                    <div class="twelve columns">
+
+                        <h3>{{company}}</h3>
+                        <p class="info">{{position}}<span>&bull;</span> <em class="date">{{startYears}} - {{endYears}}</em></p>
+
+                        <p>{{jobDesc}}</p>
+
+                    </div>
+
+                </div> <!-- item end -->
+            {{/user.jobHistory}}
+        </div> <!-- main-col end -->
+
+    </div> <!-- End Work -->
+
+
+    <!-- Skills
+    ----------------------------------------------- -->
+    <div class="row skill">
+
+        <div class="three columns header-col">
+            <h1><span>Skills</span></h1>
+        </div>
+
+        <div class="nine columns main-col">
+
+            <p><h3>Programing Language / Frameworks Development</h3> </p>
+
+            <div class="bars">
+
+                <ul class="skills">
+                    {{#user.skillset}}
+                        <li><span class="bar-expand illustrator" style="width:{{expertiseRate}}%;"></span><em>{{name}}</em></li>
+<!--                        <li><span class="bar-expand illustrator"></span><em>{{name}}</em></li>-->
+                    {{/user.skillset}}
+                </ul>
+
+            </div><!-- end skill-bars -->
+
+        </div> <!-- main-col end -->
+
+    </div> <!-- End skills -->
+
+</section> <!-- Resume Section End-->
+
+
+<!-- Portfolio Section
+================================================== -->
+<!--<section id="portfolio">-->
+
+<!--    <div class="row">-->
+
+<!--        <div class="twelve columns collapsed">-->
+
+<!--            <h1>Check Out Some of My Works.</h1>-->
+
+<!--            &lt;!&ndash; portfolio-wrapper &ndash;&gt;-->
+<!--            <div id="portfolio-wrapper" class="bgrid-quarters s-bgrid-thirds cf">-->
+<!--                <div class="columns portfolio-item">-->
+<!--                    <div class="item-wrap">-->
+
+<!--                        <a href="#modal-01" title="">-->
+<!--                            <img alt="" src="/resForAriaji/images/portfolio/coffee.jpg">-->
+<!--                            <div class="overlay">-->
+<!--                                <div class="portfolio-item-meta">-->
+<!--                                    <h5>Coffee</h5>-->
+<!--                                    <p>Illustrration</p>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="link-icon"><i class="icon-plus"></i></div>-->
+<!--                        </a>-->
+
+<!--                    </div>-->
+<!--                </div> &lt;!&ndash; item end &ndash;&gt;-->
+
+<!--                <div class="columns portfolio-item">-->
+<!--                    <div class="item-wrap">-->
+
+<!--                        <a href="#modal-02" title="">-->
+<!--                            <img alt="" src="/resForAriaji/images/portfolio/console.jpg">-->
+<!--                            <div class="overlay">-->
+<!--                                <div class="portfolio-item-meta">-->
+<!--                                    <h5>Console</h5>-->
+<!--                                    <p>Web Development</p>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="link-icon"><i class="icon-plus"></i></div>-->
+<!--                        </a>-->
+
+<!--                    </div>-->
+<!--                </div> &lt;!&ndash; item end &ndash;&gt;-->
+
+<!--                <div class="columns portfolio-item">-->
+<!--                    <div class="item-wrap">-->
+
+<!--                        <a href="#modal-03" title="">-->
+<!--                            <img alt="" src="/resForAriaji/images/portfolio/judah.jpg">-->
+<!--                            <div class="overlay">-->
+<!--                                <div class="portfolio-item-meta">-->
+<!--                                    <h5>Judah</h5>-->
+<!--                                    <p>Webdesign</p>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="link-icon"><i class="icon-plus"></i></div>-->
+<!--                        </a>-->
+
+<!--                    </div>-->
+<!--                </div> &lt;!&ndash; item end &ndash;&gt;-->
+
+<!--                <div class="columns portfolio-item">-->
+<!--                    <div class="item-wrap">-->
+
+<!--                        <a href="#modal-04" title="">-->
+<!--                            <img alt="" src="/resForAriaji/images/portfolio/into-the-light.jpg">-->
+<!--                            <div class="overlay">-->
+<!--                                <div class="portfolio-item-meta">-->
+<!--                                    <h5>Into The Light</h5>-->
+<!--                                    <p>Photography</p>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="link-icon"><i class="icon-plus"></i></div>-->
+<!--                        </a>-->
+
+<!--                    </div>-->
+<!--                </div> &lt;!&ndash; item end &ndash;&gt;-->
+
+<!--                <div class="columns portfolio-item">-->
+<!--                    <div class="item-wrap">-->
+
+<!--                        <a href="#modal-05" title="">-->
+<!--                            <img alt="" src="/resForAriaji/images/portfolio/farmerboy.jpg">-->
+<!--                            <div class="overlay">-->
+<!--                                <div class="portfolio-item-meta">-->
+<!--                                    <h5>Farmer Boy</h5>-->
+<!--                                    <p>Branding</p>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="link-icon"><i class="icon-plus"></i></div>-->
+<!--                        </a>-->
+
+<!--                    </div>-->
+<!--                </div> &lt;!&ndash; item end &ndash;&gt;-->
+
+<!--                <div class="columns portfolio-item">-->
+<!--                    <div class="item-wrap">-->
+
+<!--                        <a href="#modal-06" title="">-->
+<!--                            <img alt="" src="/resForAriaji/images/portfolio/girl.jpg">-->
+<!--                            <div class="overlay">-->
+<!--                                <div class="portfolio-item-meta">-->
+<!--                                    <h5>Girl</h5>-->
+<!--                                    <p>Photography</p>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="link-icon"><i class="icon-plus"></i></div>-->
+<!--                        </a>-->
+
+<!--                    </div>-->
+<!--                </div> &lt;!&ndash; item end &ndash;&gt;-->
+
+<!--                <div class="columns portfolio-item">-->
+<!--                    <div class="item-wrap">-->
+
+<!--                        <a href="#modal-07" title="">-->
+<!--                            <img alt="" src="/resForAriaji/images/portfolio/origami.jpg">-->
+<!--                            <div class="overlay">-->
+<!--                                <div class="portfolio-item-meta">-->
+<!--                                    <h5>Origami</h5>-->
+<!--                                    <p>Illustrration</p>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="link-icon"><i class="icon-plus"></i></div>-->
+<!--                        </a>-->
+
+<!--                    </div>-->
+<!--                </div> &lt;!&ndash; item end &ndash;&gt;-->
+
+<!--                <div class="columns portfolio-item">-->
+<!--                    <div class="item-wrap">-->
+
+<!--                        <a href="#modal-08" title="">-->
+<!--                            <img alt="" src="/resForAriaji/images/portfolio/retrocam.jpg">-->
+<!--                            <div class="overlay">-->
+<!--                                <div class="portfolio-item-meta">-->
+<!--                                    <h5>Retrocam</h5>-->
+<!--                                    <p>Web Development</p>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="link-icon"><i class="icon-plus"></i></div>-->
+<!--                        </a>-->
+
+<!--                    </div>-->
+<!--                </div>  &lt;!&ndash; item end &ndash;&gt;-->
+
+<!--            </div> &lt;!&ndash; portfolio-wrapper end &ndash;&gt;-->
+
+<!--        </div> &lt;!&ndash; twelve columns end &ndash;&gt;-->
+
+
+<!--        &lt;!&ndash; Modal Popup-->
+<!--         --------------------------------------------------------------- &ndash;&gt;-->
+
+<!--        <div id="modal-01" class="popup-modal mfp-hide">-->
+
+<!--            <img class="scale-with-grid" src="/resForAriaji/images/portfolio/modals/m-coffee.jpg" alt="" />-->
+
+<!--            <div class="description-box">-->
+<!--                <h4>Coffee Cup</h4>-->
+<!--                <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>-->
+<!--                <span class="categories"><i class="fa fa-tag"></i>Branding, Webdesign</span>-->
+<!--            </div>-->
+
+<!--            <div class="link-box">-->
+<!--                <a href="http://www.behance.net">Details</a>-->
+<!--                <a class="popup-modal-dismiss">Close</a>-->
+<!--            </div>-->
+
+<!--        </div>&lt;!&ndash; modal-01 End &ndash;&gt;-->
+
+<!--        <div id="modal-02" class="popup-modal mfp-hide">-->
+
+<!--            <img class="scale-with-grid" src="/resForAriaji/images/portfolio/modals/m-console.jpg" alt="" />-->
+
+<!--            <div class="description-box">-->
+<!--                <h4>Console</h4>-->
+<!--                <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>-->
+<!--                <span class="categories"><i class="fa fa-tag"></i>Branding, Web Development</span>-->
+<!--            </div>-->
+
+<!--            <div class="link-box">-->
+<!--                <a href="http://www.behance.net">Details</a>-->
+<!--                <a class="popup-modal-dismiss">Close</a>-->
+<!--            </div>-->
+
+<!--        </div>&lt;!&ndash; modal-02 End &ndash;&gt;-->
+
+<!--        <div id="modal-03" class="popup-modal mfp-hide">-->
+
+<!--            <img class="scale-with-grid" src="/resForAriaji/images/portfolio/modals/m-judah.jpg" alt="" />-->
+
+<!--            <div class="description-box">-->
+<!--                <h4>Judah</h4>-->
+<!--                <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>-->
+<!--                <span class="categories"><i class="fa fa-tag"></i>Branding</span>-->
+<!--            </div>-->
+
+<!--            <div class="link-box">-->
+<!--                <a href="http://www.behance.net">Details</a>-->
+<!--                <a class="popup-modal-dismiss">Close</a>-->
+<!--            </div>-->
+
+<!--        </div>&lt;!&ndash; modal-03 End &ndash;&gt;-->
+
+<!--        <div id="modal-04" class="popup-modal mfp-hide">-->
+
+<!--            <img class="scale-with-grid" src="/resForAriaji/images/portfolio/modals/m-intothelight.jpg" alt="" />-->
+
+<!--            <div class="description-box">-->
+<!--                <h4>Into the Light</h4>-->
+<!--                <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>-->
+<!--                <span class="categories"><i class="fa fa-tag"></i>Photography</span>-->
+<!--            </div>-->
+
+<!--            <div class="link-box">-->
+<!--                <a href="http://www.behance.net">Details</a>-->
+<!--                <a class="popup-modal-dismiss">Close</a>-->
+<!--            </div>-->
+
+<!--        </div>&lt;!&ndash; modal-04 End &ndash;&gt;-->
+
+<!--        <div id="modal-05" class="popup-modal mfp-hide">-->
+
+<!--            <img class="scale-with-grid" src="/resForAriaji/images/portfolio/modals/m-farmerboy.jpg" alt="" />-->
+
+<!--            <div class="description-box">-->
+<!--                <h4>Farmer Boy</h4>-->
+<!--                <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>-->
+<!--                <span class="categories"><i class="fa fa-tag"></i>Branding, Webdesign</span>-->
+<!--            </div>-->
+
+<!--            <div class="link-box">-->
+<!--                <a href="http://www.behance.net">Details</a>-->
+<!--                <a class="popup-modal-dismiss">Close</a>-->
+<!--            </div>-->
+
+<!--        </div>&lt;!&ndash; modal-05 End &ndash;&gt;-->
+
+<!--        <div id="modal-06" class="popup-modal mfp-hide">-->
+
+<!--            <img class="scale-with-grid" src="/resForAriaji/images/portfolio/modals/m-girl.jpg" alt="" />-->
+
+<!--            <div class="description-box">-->
+<!--                <h4>Girl</h4>-->
+<!--                <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>-->
+<!--                <span class="categories"><i class="fa fa-tag"></i>Photography</span>-->
+<!--            </div>-->
+
+<!--            <div class="link-box">-->
+<!--                <a href="http://www.behance.net">Details</a>-->
+<!--                <a class="popup-modal-dismiss">Close</a>-->
+<!--            </div>-->
+
+<!--        </div>&lt;!&ndash; modal-06 End &ndash;&gt;-->
+
+<!--        <div id="modal-07" class="popup-modal mfp-hide">-->
+
+<!--            <img class="scale-with-grid" src="/resForAriaji/images/portfolio/modals/m-origami.jpg" alt="" />-->
+
+<!--            <div class="description-box">-->
+<!--                <h4>Origami</h4>-->
+<!--                <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>-->
+<!--                <span class="categories"><i class="fa fa-tag"></i>Branding, Illustration</span>-->
+<!--            </div>-->
+
+<!--            <div class="link-box">-->
+<!--                <a href="http://www.behance.net">Details</a>-->
+<!--                <a class="popup-modal-dismiss">Close</a>-->
+<!--            </div>-->
+
+<!--        </div>&lt;!&ndash; modal-07 End &ndash;&gt;-->
+
+<!--        <div id="modal-08" class="popup-modal mfp-hide">-->
+
+<!--            <img class="scale-with-grid" src="/resForAriaji/images/portfolio/modals/m-retrocam.jpg" alt="" />-->
+
+<!--            <div class="description-box">-->
+<!--                <h4>Retrocam</h4>-->
+<!--                <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>-->
+<!--                <span class="categories"><i class="fa fa-tag"></i>Webdesign, Photography</span>-->
+<!--            </div>-->
+
+<!--            <div class="link-box">-->
+<!--                <a href="http://www.behance.net">Details</a>-->
+<!--                <a class="popup-modal-dismiss">Close</a>-->
+<!--            </div>-->
+
+<!--        </div>&lt;!&ndash; modal-01 End &ndash;&gt;-->
+
+
+<!--    </div> &lt;!&ndash; row End &ndash;&gt;-->
+
+<!--</section> &lt;!&ndash; Portfolio Section End&ndash;&gt;-->
+
+
+<!-- Call-To-Action Section
+================================================== -->
+<section id="call-to-action">
+
+    <div class="row">
+<!--        <div class="two columns header-col">-->
+
+<!--            <h1><span>Get Hosting.</span></h1>-->
+
+<!--        </div>-->
+
+<!--        <div class="seven columns">-->
+
+<!--            <h2><a href="http://www.dreamhost.com/r.cgi?287326|STYLESHOUT">Host This Template on Dreamhost.</a></h2>-->
+<!--            <p>Looking for an awesome and reliable webhosting? Try <a href="http://www.dreamhost.com/r.cgi?287326|STYLESHOUT"><span>DreamHost</span></a>.-->
+<!--                Get <span>$50 off</span> when you sign up with the promocode <span>STYLESHOUT</span>.-->
+<!--                &lt;!&ndash; Simply type	the promocode in the box labeled “Promo Code” when placing your order. &ndash;&gt;</p>-->
+
+<!--        </div>-->
+
+<!--        <div class="three columns action">-->
+
+<!--            <a href="http://www.dreamhost.com/r.cgi?287326|STYLESHOUT" class="button">Sign Up Now</a>-->
+
+<!--        </div>-->
+    </div>
+
+</section> <!-- Call-To-Action Section End-->
+
+<!--&lt;!&ndash; Testimonials Section-->
+<!--================================================== &ndash;&gt;-->
+<!--<section id="testimonials">-->
+
+<!--    <div class="text-container">-->
+
+<!--        <div class="row">-->
+
+<!--            <div class="two columns header-col">-->
+
+<!--                <h1><span>Client Testimonials</span></h1>-->
+
+<!--            </div>-->
+
+<!--            <div class="ten columns flex-container">-->
+
+<!--                <div class="flexslider">-->
+
+<!--                    <ul class="slides">-->
+
+<!--                        <li>-->
+<!--                            <blockquote>-->
+<!--                                <p>Your work is going to fill a large part of your life, and the only way to be truly satisfied is-->
+<!--                                    to do what you believe is great work. And the only way to do great work is to love what you do.-->
+<!--                                    If you haven't found it yet, keep looking. Don't settle. As with all matters of the heart, you'll know when you find it.-->
+<!--                                </p>-->
+<!--                                <cite>Steve Jobs</cite>-->
+<!--                            </blockquote>-->
+<!--                        </li> &lt;!&ndash; slide ends &ndash;&gt;-->
+
+<!--                        <li>-->
+<!--                            <blockquote>-->
+<!--                                <p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.-->
+<!--                                    Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem-->
+<!--                                    nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris.-->
+<!--                                </p>-->
+<!--                                <cite>Mr. Adobe</cite>-->
+<!--                            </blockquote>-->
+<!--                        </li> &lt;!&ndash; slide ends &ndash;&gt;-->
+
+<!--                    </ul>-->
+
+<!--                </div> &lt;!&ndash; div.flexslider ends &ndash;&gt;-->
+
+<!--            </div> &lt;!&ndash; div.flex-container ends &ndash;&gt;-->
+
+<!--        </div> &lt;!&ndash; row ends &ndash;&gt;-->
+
+<!--    </div>  &lt;!&ndash; text-container ends &ndash;&gt;-->
+
+<!--</section> &lt;!&ndash; Testimonials Section End&ndash;&gt;-->
+<!-- Contact Section
+================================================== -->
+<section id="contact">
+
+    <div class="row section-head">
+
+        <div class="two columns header-col">
+
+            <h1><span>Get In Touch.</span></h1>
+
+        </div>
+
+        <div class="ten columns">
+            <p class="lead">Send your support or comment to me :).
+            </p>
+
+        </div>
+
+    </div>
+
+    <div class="row">
+
+        <div class="eight columns">
+
+            <!-- form -->
+            <form action="/resForAriaji/inc/sendEmail.php" method="post" id="contactForm" name="contactForm">
+                <fieldset>
+
+                    <div>
+                        <label for="contactName">Name <span class="required">*</span></label>
+                        <input type="text" value="" size="35" id="contactName" name="contactName">
+                    </div>
+
+                    <div>
+                        <label for="contactEmail">Email <span class="required">*</span></label>
+                        <input type="text" value="" size="35" id="contactEmail" name="contactEmail">
+                    </div>
+
+                    <div>
+                        <label for="contactSubject">Subject</label>
+                        <input type="text" value="" size="35" id="contactSubject" name="contactSubject">
+                    </div>
+
+                    <div>
+                        <label for="contactMessage">Message <span class="required">*</span></label>
+                        <textarea cols="50" rows="15" id="contactMessage" name="contactMessage"></textarea>
+                    </div>
+
+                    <div>
+<!--                        <input type="submit" class="submit" id="submit" name="SUBMIT"/>-->
+                        <button class="submit">Submit</button>
+<!--                        <span id="/resForAriaji/image-loader">-->
+                        <img alt="" src="/resForAriaji/images/loader.gif">
+                     </span>
+                    </div>
+
+                </fieldset>
+            </form> <!-- Form End -->
+
+            <!-- contact-warning -->
+            <div id="message-warning"> Error boy</div>
+            <!-- contact-success -->
+            <div id="message-success">
+                <i class="fa fa-check"></i>Your message was sent, thank you!<br>
+            </div>
+
+        </div>
+
+
+        <aside class="four columns footer-widgets">
+
+            <div class="widget widget_contact">
+
+                <h4>Address and Phone</h4>
+                <p class="address">
+                    {{user.name}}<br>
+                    {{user.location}}<br>
+                    <span>{{user.telepone}}</span>
+                </p>
+            </div>
+        </aside>
+
+    </div>
+
+</section> <!-- Contact Section End-->
+
+
+<!-- footer
+================================================== -->
+<footer>
+
+    <div class="row">
+
+        <div class="twelve columns">
+
+            <ul class="social-links">
+                <li><a href="{{user.facebookUrl}}"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="https://instagram.com{{user.instagramId}}"><i class="fa fa-instagram"></i></a></li>
+                <li><a href="{{user.email}}"><i class="fa fa-google-plus"></i></a></li>
+                <li><a href="{{user.linkedin}}"><i class="fa fa-linkedin"></i></a></li>
+                <li><a href="https://github.com/{{user.gitidGithub}}"><i class="fa fa-github"></i></a></li>
+            </ul>
+
+<!--            <ul class="copyright">-->
+<!--                <li>&copy; Copyright 2014 CeeVee</li>-->
+<!--                <li>Design by <a title="Styleshout" href="http://www.styleshout.com/">Styleshout</a></li>-->
+<!--            </ul>-->
+
+        </div>
+
+        <div id="go-top"><a class="smoothscroll" title="Back to Top" href="#home"><i class="icon-up-open"></i></a></div>
+
+    </div>
+
+</footer> <!-- Footer End-->
+
+<!-- Java Script
+================================================== -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/jquery-1.10.2.min.js"><\/script>')</script>
+<script type="text/javascript" src="/resForAriaji/js/jquery-migrate-1.2.1.min.js"></script>
+
+<script src="/resForAriaji/js/jquery.flexslider.js"></script>
+<script src="/resForAriaji/js/waypoints.js"></script>
+<script src="/resForAriaji/js/jquery.fittext.js"></script>
+<script src="/resForAriaji/js/magnific-popup.js"></script>
+<script src="/resForAriaji/js/init.js"></script>
+
+</body>
+
+</html>
