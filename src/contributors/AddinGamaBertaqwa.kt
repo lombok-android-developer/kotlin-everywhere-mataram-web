@@ -12,9 +12,9 @@ class AddinGamaBertaqwa : Contributor {
     override val photoUrl: String?
         get() = "https://www.dicoding.com/images/small/avatar/201906190950408095d0c8bc386c52fdbaa27e0f255608.jpeg"
     override val descriptions: String?
-        get() = ""
+        get() = "Social entrepreneur - Lifelong learner - Big believer of clean earth"
     override val currentJob: String?
-        get() = "Freelancer"
+        get() = "CEO smash.id (Co-Founder)"
     override val idGithub: String
         get() = "@addingama"
     override val name: String
@@ -46,29 +46,35 @@ class AddinGamaBertaqwa : Contributor {
             Jobs(
                 "PHP & Android Developer",
                 "PT. Walden Global Services",
-                "",
+                "-",
                 "2012",
                 "2015"
             ),
             Jobs(
                 "Lead Developer",
                 "Geeknesia",
-                "",
+                "-",
                 "2015",
                 "2016"
             ),
             Jobs(
                 "React Native Engineer",
                 "Freelance",
-                "",
+                "-",
                 "2017"
             ),
             Jobs(
                 "Software Engineer",
                 "PT. Mitrais",
-                "",
+                "-",
                 "2017",
                 "2017"
+            ),
+            Jobs(
+                "Chief Technology Officer",
+                "PT. Solusi Hijau Indonesia",
+                "-",
+                "2014"
             )
         )
     override val educations: List<Educations>?
