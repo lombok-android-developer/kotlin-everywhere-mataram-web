@@ -43,6 +43,15 @@ CATATAN:
 10. Test.
 11. Commit perubahan, kemudian lakukan pull request. 
 
+### Cara menjalankan
+1. Linux / Mac
+    * Buka terminla dan masuk ke path projek ini
+    * Jalankan perintah `./gradlew run`
+    * Akses `http://localhost:8080` di browsermu
+    * Untuk lebih mudah, jalankan printah `./gradlew -t build` di terminal yang lain untuk mengaktifkan `autobuild` dan selamatkan waktumu
+2. Windows
+    * Perlu bantuan . . .
+
 ===========================================
 
 # KOTLIN/Everywhere & Hacktoberfest Mataram
@@ -89,6 +98,15 @@ Before start contributing, please give star to this repo.
 
 10. Testing
 11. Commit your changes, then do pull request 
+
+### How to run
+1. Linux / Mac
+    * Open your terminal and enter into this project path
+    * run command `./gradlew run`
+    * Access `http://localhost:8080` on your browser
+    * For better, run `./gradlew -t build` command in another terminal to activate `autobuild` and save your time
+2. Windows
+    * Need help . . .
 
 ## #HAPPYHACKTOBERFEST
 
