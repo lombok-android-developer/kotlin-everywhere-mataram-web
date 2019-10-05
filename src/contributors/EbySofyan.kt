@@ -40,6 +40,7 @@ class EbySofyan : Contributor {
             Skills("Sitting Sleeper"),
             Skills("Python"),
             Skills("Django"),
+            Skills("Kotlin"),
             Skills("Android Development")
         )
     override val location: String?
