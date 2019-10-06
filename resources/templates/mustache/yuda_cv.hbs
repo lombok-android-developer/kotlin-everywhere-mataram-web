@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="en" class="no-js">
+
+{{!-- copyright &copy Yuda Karnaen 2019 --}}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400,700' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="/resYuda/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/resYuda/css/reset.css"> <!-- CSS reset -->
+    <link rel="stylesheet" href="/resYuda/css/style.css"> <!-- Resource style -->
+    <link rel="stylesheet" href="/resYuda/css/agency.min.css">
+    <link rel="stylesheet" href="/resYuda/css/animate.css">
+    <link rel="stylesheet" href="/resYuda/css/aos.css">
+    <script src="/resYuda/js/modernizr.js"></script> <!-- Modernizr -->
+
+    <!-- icon -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- font -->
+    <link href="https://fonts.googleapis.com/css?family=Mansalva&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono&display=swap" rel="stylesheet">
+
+    <title>{{user.name}}</title>
+</head>
+
+<body>
+    <nav id="cd-vertical-nav" style="color: white">
+        <ul>
+            <li>
+                <a href="#section1" data-number="1">
+                    <span class="fa fa-home fa-2x fa-fw"></span>
+                    <span class="cd-label">Intro</span>
+                </a>
+            </li>
+            <li>
+                <a href="#section2" data-number="2">
+                    <span class="fa fa-user fa-2x fa-fw"></span>
+                    <span class="cd-label">About Me</span>
+                </a>
+            </li>
+            <li>
+                <a href="#section3" data-number="3">
+                    <span class="fa fa-graduation-cap fa-2x fa-fw"></span>
+                    <span class="cd-label">Education</span>
+                </a>
+            </li>
+            <li>
+                <a href="#section4" data-number="4">
+                    <span class="fa fa-code fa-2x fa-fw"></span>
+                    <span class="cd-label">Skills</span>
+                </a>
+            </li>
+            <li>
+                <a href="#section5" data-number="5">
+                    <span class="fa fa-file-code-o fa-2x fa-fw"></span>
+                    <span class="cd-label">Portfolio</span>
+                </a>
+            </li>
+            <li>
+                <a href="#section6" data-number="6">
+                    <span class="fa fa-briefcase fa-2x fa-fw"></span>
+                    <span class="cd-label">Experience</span>
+                </a>
+            </li>
+            <li>
+                <a href="#section7" data-number="7">
+                    <span class="fa fa-phone fa-2x fa-fw"></span>
+                    <span class="cd-label">Contact</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <a class="cd-nav-trigger cd-img-replace">Open navigation<span></span></a>
+
+    <section id="section1" class="cd-section">
+        <div class="overlay"></div>
+        <div class="banner-text animated fadeInUp">
+            <h1 style="text-shadow: 0 0 20px #292430; margin-top: -50px">YudaKarnaen.kt</h1>
+            <p class="text-center" style="margin-top: -100px">> eat() sleep() code() pray() repeat()_</p>
+        </div>
+        <a href="#section2" class="cd-scroll-down cd-img-replace">scroll down</a>
+    </section><!-- cd-section -->
+
+    <section id="section2" class="cd-section">
+        <div class="container">
+            <h1 class="text-center" data-aos="fade-up">About Me_</h1>
+            <div class="row no-gutters">
+                <div class="col-6 col-md-4 text-center" data-aos="fade-right">
+                    <a href="#">
+                        <img src="/resYuda/img/Yuda-Avatar.jpg"
+                            style="border-radius: 50%; width:150px; box-shadow: 0 3px 5px #292430" alt="Yuda Karnaen">
+                    </a>
+                </div>
+                <div class="col-12 col-sm-6 col-md-8" data-aos="fade-left">
+                    <p>My Name is <b>{{user.name}}</b>,
+                        I'm 20 years old,</p>
+                    <p>{{user.descriptions}}</p>
+                    <p>I live in {{user.location}}</p>
+                    <hr>
+                    <p>{{user.email}}</p>
+                </div>
+            </div>
+        </div>
+
+    </section><!-- cd-section -->
+
+    <section id="section3" class="cd-section">
+        <div class="container">
+            <h1 class="text-center" data-aos="flip-down">Education_</h1>
+            <div class="row">
+                    {{#user.educations}}
+                <div class="col-6" data-aos="fade-up" data-aos-duration="3000">
+                    <div class="edu-top">
+                        <div class="row">
+                            <div class="dot bg-red" style="background-color: brown"></div>
+                            <div class="dot bg-yellow" style="background-color: darkgoldenrod"></div>
+                            <div class="dot bg-green" style="background-color: green"></div>
+                        </div>
+                    </div>
+                    <div class="edu-panel text-center">
+                        <h2>{{institution}}</h2>
+                        <h3>{{grade}}</h3>
+                        <h3>{{years}}</h3>
+                        <hr>
+                        <div class="d-flex justify-content-center">
+                            <span class="text-white fa fa-trophy fa-5x fa-fw"></span>
+                        </div>
+                        <h3 class="text-white">"{{descriptions}}"</h3>
+                    </div>
+                </div>
+                    {{/user.educations}}
+            </div>
+        </div>
+    </section><!-- cd-section -->
+
+    <section id="section4" class="cd-section">
+        <div class="container">
+            <h1 class="text-center" data-aos="fade-up">Skills_</h1>
+            <div class="row">
+                    {{#user.skillset}}
+                <div class="col-6" data-aos="zoom-in" data-aos-duration="3000">
+                    <h2 class="text-white">{{name}}</h2>
+                    <div class="progress">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: {{expertiseRate}}%" aria-valuenow="95"
+                            aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                </div>
+                    {{/user.skillset}}
+            </div>
+        </div>
+    </section><!-- cd-section -->
+
+    <section id="section5" class="cd-section">
+        <div class="container">
+            <h1 class="text-center" data-aos="fade-up">Portofolio_</h1>
+            <div class="row">
+                <div class="col-4" data-aos="fade-up" data-aos-duration="2000">
+                    <div class="port-img" id="larakost"></div>
+                    <div class="port-panel">
+                        <a href="https://github.com/yudartcode/larakost"><span
+                                class="fa fa-github fa-2x float-right"></span></a>
+                        <h2>Larakost</h2>
+                        <h3>PHP Laravel</h3>
+                    </div>
+                </div>
+
+                <div class="col-4" data-aos="fade-up" data-aos-duration="2000">
+                    <div class="port-img" id="wisata"></div>
+                    <div class="port-panel">
+                        <a href="https://github.com/yudartcode/Wisata-Lombok"><span
+                                class="fa fa-github fa-2x float-right"></span></a>
+                        <h2>Wisata Lombok</h2>
+                        <h3>Java Android</h3>
+                    </div>
+                </div>
+
+                <div class="col-4" data-aos="fade-up" data-aos-duration="2000">
+                    <div class="port-img" id="mantuku"></div>
+                    <div class="port-panel">
+                        <a href="https://github.com/yudartcode/manajemen-tugas-kuliah"><span
+                                class="fa fa-github fa-2x float-right"></span></a>
+                        <h2>Mantuku</h2>
+                        <h3>PHP Laravel</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!-- cd-section -->
+
+    <section id="section6" class="cd-section">
+        <div class="container">
+            <h1 class="text-center" data-aos="fade-up">Experience_</h1>
+            <div class="row">
+                <div class="col-lg-12">
+                    <ul class="timeline">
+                        <li data-aos="fade-right">
+                            <div class="timeline-image">
+                                <br><br>
+                                <span class="fa fa-university fa-5x text-white"></span>
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h2 class="text-white">STT Hamzanwadi Pancor</h2>
+                                    <h4>December 2013</h4>
+                                    <h4 class="subheading">East Lombok, Indonesia</h4>
+                                    <hr>
+                                </div>
+                                <div class="timeline-body">
+                                    <p style="font-size: 20px" class="text-right">Praktek Kerja Lapangan (PKL) SMKN 1
+                                        Selong
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="timeline-inverted" data-aos="fade-left">
+                            <div class="timeline-image">
+                                <img class="rounded-circle img-fluid" src="/resYuda/img/Logo-M.jpg" alt="">
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h2 class="text-white">Mascavio</h2>
+                                    <h4>July 2019</h4>
+                                    <h4 class="subheading">Mataram, Indonesia</h4>
+                                    <hr>
+                                </div>
+                                <div class="timeline-body">
+                                    <p style="font-size: 20px">Mascavio menyediakan layanan public internet berbasis
+                                        teknologi Wifi Hotspot dalam rangka mendukung program percepatan dan perluasan
+                                        pembangunan ekonomi Indonesia di bidang ICT yang telah dicanangkan oleh
+                                        Pemerintah Republic Indonesia.</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="timeline-inverted" data-aos="fade-right">
+                            <div class="timeline-image">
+                                <h2 class="text-white">
+                                    <br>
+                                    <br>
+                                    Soon</h2>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section><!-- cd-section -->
+
+    <section id="section7" class="cd-section">
+        <div class="container">
+            <h1 class="text-center" data-aos="fade-up">Contact Me_</h1>
+            <div class="row">
+                <div class="col-6">
+                    <h2 class="text-center text-white m-5" data-aos="zoom-in">Find Me</h2>
+                    <ul class="list-inline social-buttons text-center" data-aos="zoom-in">
+                        <li class="list-inline-item animate-up">
+                            <a href="https://twitter.com/{{user.instagramId}}">
+                                <i class="fa fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item animate-up">
+                            <a href="https://faceook.com/yuda.karnaen11">
+                                <i class="fa fa-facebook-f"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item animate-up">
+                            <a href="{{user.linkedin}}">
+                                <i class="fa fa-linkedin"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item animate-up">
+                            <a href="https://instagram.com/{{user.instagramId}}">
+                                <i class="fa fa-instagram"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item animate-up">
+                            <a href="#">
+                                <i class="fa fa-youtube"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item animate-up">
+                            <a href="https://github.com/{{user.idGithub}}">
+                                <i class="fa fa-github"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item animate-up">
+                            <a href="https://telegram.com{{user.idTelegram}}">
+                                <i class="fa fa-paper-plane"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-6">
+                    <h2 class="text-center text-white m-5" data-aos="zoom-in">Message</h2>
+
+                    <form data-aos="zoom-in">
+                        <div class="form-group">
+                            <label for="">Name</label>
+                            <input type="text" class="form-control" placeholder="Enter name*">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp" placeholder="Enter email*">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Message</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"
+                                placeholder="Message*"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-dark">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <hr>
+            <div class="text-center text-white m-4">Copyright &copy Yuda Karnaen 2019</div>
+            <hr>
+        </div>
+    </section><!-- cd-section -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="/resYuda/js/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+        });
+    </script>
+    <script src="/resYuda/js/jquery-2.1.1.js"></script>
+    <script src="/resYuda/js/main.js"></script> <!-- Resource jQuery -->
+    <script src="/resYuda/js/scrollax.min.js"></script>
+</body>
+
+</html>

@@ -13,11 +13,11 @@ class YudaKarnaen : Contributor {
     override val photoUrl: String?
         get() = "https://www.dicoding.com/images/small/avatar/2019043011481843d75ca9558530b7db3ae88085dd0228.png"
     override val descriptions: String?
-        get() = "Suka ngoding dan gaming hehe"
+        get() = "I'm a junior fullstack developer. learning web development from high school, mobile        development and machine learning until now, I like design, I familiar with photoshop but now i'm        studying adobe illustrator. I love food and beach because Lombok has many beautiful beaches, i like ride a bike and sometimes i playing game for fun."
     override val currentJob: String?
-        get() = "Freelancer | Mahasiswa"
+        get() = "Mahasiswa"
     override val idGithub: String
-        get() = "@yudartcode"
+        get() = "yudartcode"
     override val name: String
         get() = "L Yuda Rahmani Karnaen"
     override val email: String?
@@ -25,26 +25,29 @@ class YudaKarnaen : Contributor {
     override val linkedin: String?
         get() = "https://www.linkedin.com/in/yuda-karnaen-3b1421138/"
     override val stackOverflow: String?
-        get() = null
+        get() = "https://stackoverflow.com/users/12163888/yuda-karnaen"
     override val idTelegram: String?
         get() = "@yudakarnaen"
     override val skillset: List<Skills>?
         get() = listOf(
-            Skills("Java"),
-            Skills("Kotlin"),
-            Skills("Android Development"),
-            Skills("Python"),
-            Skills("Laravel"),
-            Skills(".NET")
+            Skills("Java", expertiseRate= 70),
+            Skills("Kotlin", expertiseRate= 75),
+            Skills("Android", expertiseRate= 65),
+            Skills("Python", expertiseRate= 60),
+            Skills("PHP Laravel", expertiseRate= 80),
+            Skills("HTML", expertiseRate= 90),
+            Skills("CSS", expertiseRate= 85),
+            Skills("Javascript", expertiseRate= 60),
+            Skills(".NET", expertiseRate= 75)
         )
     override val location: String?
-        get() = "Mataram"
+        get() = "Mataram, Indonesia"
     override val jobHistory: List<Jobs>?
         get() = listOf(
             Jobs(
                 "Web Developer",
                 "Mascavio",
-                "Divisi Web Developer",
+                "Web Development Division",
                 "2019"
             )
         )
@@ -52,15 +55,15 @@ class YudaKarnaen : Contributor {
         get() = listOf(
             Educations(
                 "Dicoding Academi",
-                "Fundamental",
+                "Intermediate",
                 "2019",
-                "Android Fundamental"
+                "Membuat Aplikasi Android Untuk Pemula"
             ),
             Educations(
                 "Dicoding Academi",
                 "Fundamental",
                 "2019",
-                "Kotlin Fundamental"
+                "Memulai Pemrograman Denan Kotlin"
             ),
             Educations(
                 "Dicoding Academi",
@@ -69,14 +72,13 @@ class YudaKarnaen : Contributor {
                 "Web Fundamental"
             ),
             Educations(
-                "SMK Negeri 1 Selong",
-                "SLTA",
+                "Vocational High School 1 Selong",
+                "Student of The Year 2017",
                 "2014 - 2017",
                 "Teknik Komputer dan Informatika"
             ),
-
             Educations(
-                "Universitas Bumigora",
+                "Universitas Bumigora Mataram",
                 "S1",
                 "2017 - Now",
                 "Ilmu Komputer"
@@ -84,14 +86,12 @@ class YudaKarnaen : Contributor {
         )
 
     override suspend fun response(call: ApplicationCall) {
-        call.respond(MustacheContent("cv.hbs", mapOf("user" to this)))
+        call.respond(MustacheContent("yuda_cv.hbs", mapOf("user" to this)))
     }
 
     companion object {
         fun initialize(map: MutableMap<String, Contributor>) {
-            map["yuda"] = YudaKarnaen()
             map["yudakarnaen"] = YudaKarnaen()
-            map["yudartcode"] = YudaKarnaen()
         }
     }
 }
