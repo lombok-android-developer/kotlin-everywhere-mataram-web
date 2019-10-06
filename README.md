@@ -51,11 +51,14 @@ CATATAN:
     * Untuk lebih mudah, jalankan printah `./gradlew -t build` di terminal yang lain untuk mengaktifkan `autobuild` dan selamatkan waktumu
 2. Windows
     * Buka CMD dan masuk ke directory project ini.
-    * jalankan perintag `gradlew.bat run` dari dalam folder project
+    * jalankan perintah `gradlew.bat run` dari dalam folder project
     * akses `http://localhost:8080` melalui web browser
 
 3. IntelliJ IDEA
-    * Buka Tab gradle yang ada pada panel sebelah kanan 
+    * Buka Tab gradle yang ada pada panel sebelah kanan
+    * kemudian Pilih `Tasks` > `application` > `run`
+    
+    
 ===========================================
 
 # KOTLIN/Everywhere & Hacktoberfest Mataram
@@ -110,7 +113,14 @@ Before start contributing, please give star to this repo.
     * Access `http://localhost:8080` on your browser
     * For better, run `./gradlew -t build` command in another terminal to activate `autobuild` and save your time
 2. Windows
-    * Need help . . .
+    * open CMD and navigate to root directory project.
+    * run command `gradlew.bat run` 
+    * open `http://localhost:8080` from any web browser
+
+3. IntelliJ IDEA
+    * open `gradle` Tab on the right panel of IDE
+    * then choose `Tasks` > `application` > `run`
+    
 
 ## #HAPPYHACKTOBERFEST
 
