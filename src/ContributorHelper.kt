@@ -33,4 +33,3 @@ object ContributorHelper {
         .groupBy { it.value.email }
         .map { it.value.first().key to it.value.first().value }.toList()
 }
-
