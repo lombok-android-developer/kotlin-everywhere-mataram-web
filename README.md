@@ -57,7 +57,7 @@ CATATAN:
 3. IntelliJ IDEA
     * Buka Tab gradle yang ada pada panel sebelah kanan
     * kemudian Pilih `Tasks` > `application` > `run`
-    
+    <img src="images/7.png" width="300"/>
     
 ===========================================
 
@@ -120,6 +120,7 @@ Before start contributing, please give star to this repo.
 3. IntelliJ IDEA
     * open `gradle` Tab on the right panel of IDE
     * then choose `Tasks` > `application` > `run`
+    <img src="images/7.png" width="300"/>
     
 
 ## #HAPPYHACKTOBERFEST
