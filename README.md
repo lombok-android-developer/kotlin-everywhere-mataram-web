@@ -45,13 +45,20 @@ CATATAN:
 
 ### Cara menjalankan
 1. Linux / Mac
-    * Buka terminla dan masuk ke path projek ini
+    * Buka terminal dan masuk ke path projek ini
     * Jalankan perintah `./gradlew run`
-    * Akses `http://localhost:8080` di browsermu
+    * Akses `http://localhost:8080` di browser mu
     * Untuk lebih mudah, jalankan printah `./gradlew -t build` di terminal yang lain untuk mengaktifkan `autobuild` dan selamatkan waktumu
 2. Windows
-    * Perlu bantuan . . .
+    * Buka CMD dan masuk ke directory project ini.
+    * jalankan perintah `gradlew.bat run` dari dalam folder project
+    * akses `http://localhost:8080` melalui web browser
 
+3. IntelliJ IDEA
+    * Buka Tab gradle yang ada pada panel sebelah kanan
+    * kemudian Pilih `Tasks` > `application` > `run`
+    <img src="images/7.png" width="300"/>
+    
 ===========================================
 
 # KOTLIN/Everywhere & Hacktoberfest Mataram
@@ -106,7 +113,15 @@ Before start contributing, please give star to this repo.
     * Access `http://localhost:8080` on your browser
     * For better, run `./gradlew -t build` command in another terminal to activate `autobuild` and save your time
 2. Windows
-    * Need help . . .
+    * open CMD and navigate to root directory project.
+    * run command `gradlew.bat run` 
+    * open `http://localhost:8080` from any web browser
+
+3. IntelliJ IDEA
+    * open `gradle` Tab on the right panel of IDE
+    * then choose `Tasks` > `application` > `run`
+    <img src="images/7.png" width="300"/>
+    
 
 ## #HAPPYHACKTOBERFEST
 
