@@ -45,13 +45,17 @@ CATATAN:
 
 ### Cara menjalankan
 1. Linux / Mac
-    * Buka terminla dan masuk ke path projek ini
+    * Buka terminal dan masuk ke path projek ini
     * Jalankan perintah `./gradlew run`
-    * Akses `http://localhost:8080` di browsermu
+    * Akses `http://localhost:8080` di browser mu
     * Untuk lebih mudah, jalankan printah `./gradlew -t build` di terminal yang lain untuk mengaktifkan `autobuild` dan selamatkan waktumu
 2. Windows
-    * Perlu bantuan . . .
+    * Buka CMD dan masuk ke directory project ini.
+    * jalankan perintag `gradlew.bat run` dari dalam folder project
+    * akses `http://localhost:8080` melalui web browser
 
+3. IntelliJ IDEA
+    * Buka Tab gradle yang ada pada panel sebelah kanan 
 ===========================================
 
 # KOTLIN/Everywhere & Hacktoberfest Mataram
