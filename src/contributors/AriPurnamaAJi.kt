@@ -9,6 +9,10 @@ import io.ktor.mustache.MustacheContent
 import io.ktor.response.respond
 
 class AriPurnamaAJi : Contributor{
+    val telepone:String get() = "+6283-1898-82173"
+    val headerPhoto:String get() = "https://scontent.fdps5-1.fna.fbcdn.net/v/t1.0-9/43056164_2120204024867007_4139270664185970688_n.jpg?_nc_cat=103&_nc_eui2=AeET84LDCr7bso527Ti1SPwN_Cj6P4Pb_teTFCGwav0BAocxrVFUwmk3Z6zFlbQwLine9bHDM2xoMASvj7994E8GdzQN4WqyCSva_GviRsj_sw&_nc_oc=AQm9U9o0IZwMIlgnxcOKa9YN7IJaE9WXDoJbmTVuxVRwHNn93eRKR6u7617urTNGeIs&_nc_ht=scontent.fdps5-1.fna&oh=a46e5931649c91e26571d604f60e12f8&oe=5DF03231"
+    val facebookUrl:String get() = "https://www.facebook.com/ali.sangfighter"
+    val intagramId:String get() = "@ari_aji25"
     override val idGithub: String
         get() = "@ariaji25"
     override val name: String
@@ -20,7 +24,7 @@ class AriPurnamaAJi : Contributor{
     override val email: String?
         get() = "ari.purnama838@gmail.com"
     override val descriptions: String?
-        get() = "I am Junior Developer, I am satart Join into Android Development on 2019 start with Java Android, and Flutter for Mobile.\n " +
+        get() = "I am Junior Developer, I am start to Join into Android Development on 2019 start with Java Android, and Flutter for Mobile.\n " +
                 "After that I am join into Lumbung Inovasi to get more experience, and I join every project that I can to work with Android Development "
     override val linkedin: String?
         get() = "https://www.linkedin.com/in/ari-aji-29208b180/"
@@ -30,44 +34,61 @@ class AriPurnamaAJi : Contributor{
         get() = "@ariaji25"
     override val skillset: List<Skills>?
         get() = listOf(
-            Skills("Java"),
-            Skills("C"),
-            Skills("C++"),
-            Skills("Python"),
-            Skills("Kotlin"),
-            Skills("PHP"),
-            Skills("Flutter for Mobile"),
-            Skills("Android Java"),
-            Skills("Android Kotlin")
+            Skills("Java", expertiseRate= 85),
+            Skills("C",  expertiseRate= 80),
+            Skills("C++",  expertiseRate= 80),
+            Skills("Python",  expertiseRate= 70),
+            Skills("Kotlin",  expertiseRate= 88),
+            Skills("PHP", expertiseRate= 60),
+            Skills("Flutter for Mobile",  expertiseRate= 85),
+            Skills("Android Java",  expertiseRate= 80),
+            Skills("Android Kotlin",  expertiseRate= 88)
         )
     override val location: String?
-        get() = "Mataram, Nusa Tenggara Barat, Indonesia"
+        get() = "Mataram, Indonesia"
     override val jobHistory: List<Jobs>?
         get() = listOf(
             Jobs(
                 "Android Developer",
                 "Lumbung Inovasi",
-                "join every project that I can work for Android Development",
-                "2019",
-                "-")
+                "Join every project that I can work for Android Development",
+                "Jan 2019","Present")
         )
     override val educations: List<Educations>?
         get() = listOf(
             Educations(
+                "Elementry School of Sundil",
+                "Graduate",
+                "Juli 2010",
+                ""
+            ),
+            Educations(
+                "Third Junior High School of Praya",
+                "Graduate",
+                "Juli 2013",
+                ""
+            ),
+            Educations(
+                "Vocational High School of Management Praya Tengah",
+                "Multimedia Graduated",
+                "Juli 2016",
+                "Animation Creator, Design, and Videografi"
+            ),
+            Educations(
                 "Dicoding Academy",
                 "Beginner",
-                "2019",
+                "Jul 2019",
                 "Belajar Membuat Aplikasi Android untuk Pemula"
                 ),
             Educations(
                 "Universitas Mataram",
                 "Undergraduate",
-                "2016",
+                "Aug 2016 - Present",
                 "Informatics Engenering"
             )
         )
     override suspend fun response(call: ApplicationCall) {
-        call.respond(MustacheContent("cv.hbs", mapOf("user" to this)))
+        call.respond(MustacheContent("Ariaji_CvResume.hbs", mapOf("user" to this)))
     }
 
     companion object{

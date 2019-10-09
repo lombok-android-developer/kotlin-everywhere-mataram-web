@@ -1,0 +1,120 @@
+
+.icon-lg{
+  font-size: 64px !important;
+}
+.icon-md{
+  font-size: 32px !important;
+}
+.icon-sm{
+  font-size: 16px !important;
+}
+
+
+.icon_box_one{
+  background-color: #f0f2f6;
+  padding: 0;
+  margin: 25px 0;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0.08);
+  @include single-transition(all,0.4s, ease-in-out);
+  i{
+    margin-top: -10px;
+    padding: 0 15px;
+    font-size: 72px;
+    color: $color-primary;
+    vertical-align: middle;
+    border-radius: 4px;
+    display: block;
+    margin-bottom: 15px;
+    line-height: 1;
+    @include single-transition(all,0.4s, ease-in-out);
+
+  }
+  .content{
+    margin-top: 0;
+    padding: 10px 25px 25px;
+    h4{
+      color: $color-black;
+      margin-bottom: 15px;
+      text-transform: capitalize;
+      @include single-transition(all,0.4s, ease-in-out);
+
+    }
+    a{
+      color: $color-primary;
+      font-size: 14px;
+      font-weight: 600;
+      text-transform: capitalize;
+      @include single-transition(all,0.4s, ease-in-out);
+
+    }
+    p{
+      @include single-transition(all,0.4s, ease-in-out);
+    }
+  }
+  &:hover{
+    box-shadow: 0 10px 32px rgba(0, 0, 0, 0.25);
+    background-color: $color-primary;
+    @include single-transition(all,0.4s, ease-in-out);
+    i{
+      color: $color-light;
+      @include single-transition(all,0.4s, ease-in-out);
+
+    }
+    .content{
+      h4{
+        color: $color-light;
+        @include single-transition(all,0.4s, ease-in-out);
+
+      }
+      p{
+       color: $color-light;
+        @include single-transition(all,0.4s, ease-in-out);
+
+      }
+      a{
+        color: $color-light;
+        @include single-transition(all,0.4s, ease-in-out);
+
+      }
+  }
+  }
+
+}
+
+
+.icon_box_two{
+  position: relative;
+  padding: 0;
+  margin: 25px 0;
+  i{
+    position: absolute;
+    left: 0;
+    font-size: 56px;
+    width: 50px;
+    color: $color-primary;
+    top: 0;
+    bottom: auto;
+    line-height: 1;
+  }
+  .content{
+    margin-left: 60px;
+    float: left;
+    .box_title{
+      margin-bottom: 3px;
+      font-weight: 500;
+      text-transform: uppercase;
+      margin-top: 6px;
+    }
+    p{
+      font-weight: 500;
+      color: #838383;
+    }
+  }
+}
+
+
+
+
+

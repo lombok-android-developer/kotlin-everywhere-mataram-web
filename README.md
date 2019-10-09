@@ -4,6 +4,8 @@
 Dalam repository ini anda di challenge untuk membuat sebuah website dengan menggunakan Kotlin. Framework yang digunakan pada repository ini yakni: [ktor](http://ktor.io/).
 
 ### Cara Berkontribusi:
+Sebelum memulai, silahkan beri Bintang.
+
 1. Fork Project
 2. Clone ke lokal komputer anda
 3. Buka project dengan IntelliJ IDEA
@@ -41,6 +43,22 @@ CATATAN:
 10. Test.
 11. Commit perubahan, kemudian lakukan pull request. 
 
+### Cara menjalankan
+1. Linux / Mac
+    * Buka terminal dan masuk ke path projek ini
+    * Jalankan perintah `./gradlew run`
+    * Akses `http://localhost:8080` di browser mu
+    * Untuk lebih mudah, jalankan printah `./gradlew -t build` di terminal yang lain untuk mengaktifkan `autobuild` dan selamatkan waktumu
+2. Windows
+    * Buka CMD dan masuk ke directory project ini.
+    * jalankan perintah `gradlew.bat run` dari dalam folder project
+    * akses `http://localhost:8080` melalui web browser
+
+3. IntelliJ IDEA
+    * Buka Tab gradle yang ada pada panel sebelah kanan
+    * kemudian Pilih `Tasks` > `application` > `run`
+    <img src="images/7.png" width="300"/>
+    
 ===========================================
 
 # KOTLIN/Everywhere & Hacktoberfest Mataram
@@ -49,6 +67,8 @@ CATATAN:
 In this Repository you are challenged to make a Website using Kotlin. Framework used in this repository is [ktor](http://ktor.io/).
 
 ### How to Contribute :
+Before start contributing, please give star to this repo.
+
 1. Fork the Project
 2. Clone or Download to your local storage
 3. Open the project using IntelliJ IDEA
@@ -86,21 +106,30 @@ In this Repository you are challenged to make a Website using Kotlin. Framework 
 10. Testing
 11. Commit your changes, then do pull request 
 
+### How to run
+1. Linux / Mac
+    * Open your terminal and enter into this project path
+    * run command `./gradlew run`
+    * Access `http://localhost:8080` on your browser
+    * For better, run `./gradlew -t build` command in another terminal to activate `autobuild` and save your time
+2. Windows
+    * open CMD and navigate to root directory project.
+    * run command `gradlew.bat run` 
+    * open `http://localhost:8080` from any web browser
+
+3. IntelliJ IDEA
+    * open `gradle` Tab on the right panel of IDE
+    * then choose `Tasks` > `application` > `run`
+    <img src="images/7.png" width="300"/>
+    
+
 ## #HAPPYHACKTOBERFEST
 
-Rewards list :
+# Rewards/Swags
 #### Noted : Swags can be claimed when attending Kotlin/Everywhere & Hacktoberfest Mataram at 26'th October 2019.
-1. <img src="images/1.jpg"/>
-
-2. <img src="images/2.jpg"/>
-
-3. <img src="images/3.jpg"/>
-
-4. <img src="images/4.jpg"/>
-
-5. <img src="images/5.jpg"/>
-
-6. <img src="images/6.jpg"/>
+<img src="images/1.jpg" width="300"/>  <img src="images/2.jpg" width="300"/> 
+<img src="images/3.jpg" width="300"/>  <img src="images/4.jpg" width="300"/> 
+<img src="images/5.jpg" width="300"/>  <img src="images/6.jpg" width="300"/>
 
 
 
