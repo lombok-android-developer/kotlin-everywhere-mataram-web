@@ -10,7 +10,7 @@ import io.ktor.response.respond
 
 class IlhamBintang : Contributor {
     override val photoUrl: String?
-        get() = "https://imgur.com/6XDaq5v"
+        get() = "https://i.imgur.com/6XDaq5v.png"
     override val descriptions: String?
         get() = "Machine Learning Eng. Math Learniner. Proud Geek.\n" +
                 "Food Reviewer."
