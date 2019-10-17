@@ -3,6 +3,51 @@
 Primary style
 
 -------------------------------- */
+/*reset*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, main {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*----------------------------------*/
 
 html * {
   -webkit-font-smoothing: antialiased;
@@ -136,7 +181,7 @@ Main components
   bottom: 20px;
   width: 38px;
   height: 44px;
-  background: url("../img/cd-arrow-bottom.svg") no-repeat center center;
+  background: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFk%0D%0Ab2JlIElsbHVzdHJhdG9yIDE4LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246%0D%0AIDYuMDAgQnVpbGQgMCkgIC0tPgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZH%0D%0AIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5k%0D%0AdGQiPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3Lncz%0D%0ALm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsi%0D%0AIHg9IjBweCIgeT0iMHB4IgoJIHdpZHRoPSIzOHB4IiBoZWlnaHQ9IjQ0cHgiIHZpZXdCb3g9IjAg%0D%0AMCAzOCA0NCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMzggNDQiIHhtbDpzcGFjZT0icHJl%0D%0Ac2VydmUiPgo8Zz4KCTxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2Rk%0D%0AIiBmaWxsPSIjNjg2NDcwIiBkPSJNMzcuMywyMi4yYy0wLjUtMC4zLTEuMi0wLjEtMS40LDAuNEwx%0D%0AOSw0MS41TDIuMSwyMi42CgkJYy0wLjMtMC41LTAuOS0wLjYtMS40LTAuNGMtMC41LDAuMy0wLjcs%0D%0AMC45LTAuNCwxLjNMMTgsNDMuNGMwLjIsMC4zLDAuNiwwLjUsMSwwLjVjMC40LDAsMC44LTAuMiwx%0D%0ALTAuNWwxNy43LTE5LjgKCQlDMzgsMjMuMSwzNy44LDIyLjUsMzcuMywyMi4yeiIvPgoJPHBhdGgg%0D%0AZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGZpbGw9IiM0QjQ4NTQiIGQ9%0D%0AIk0xOCwyMS40YzAuMiwwLjMsMC42LDAuNSwxLDAuNWMwLjQsMCwwLjgtMC4yLDEtMC41TDM3Ljcs%0D%0AMS42CgkJYzAuMy0wLjUsMC4xLTEuMS0wLjQtMS4zYy0wLjUtMC4zLTEuMi0wLjEtMS40LDAuNEwx%0D%0AOSwxOS41TDIuMSwwLjZDMS44LDAuMSwxLjIsMCwwLjcsMC4yQzAuMiwwLjUsMCwxLjEsMC4zLDEu%0D%0ANkwxOCwyMS40eiIvPgo8L2c+Cjwvc3ZnPgo=") no-repeat center center;
 }
 
 /* No Touch devices */
@@ -383,7 +428,7 @@ Main components
 }
 
 .banner-text {
-  background-image: src('../img/Yuda.jpg');
+  background-image: src("https://github.com/yudartcode/yudartcode.github.io/blob/master/img/Yuda.jpg?raw=true");
   -webkit-animation-duration: 2s;
   -webkit-animation-delay: 700ms;
 }
@@ -410,7 +455,7 @@ Main components
 }
 
 #section1 {
-  background: url("../img/Yuda.jpg") no-repeat center center;
+  background: url("https://github.com/yudartcode/yudartcode.github.io/blob/master/img/Yuda.jpg?raw=true") no-repeat center center;
   width: 100%;
   height: 100vh;
   display: flex;
@@ -506,15 +551,15 @@ h3 {
 }
 
 #larakost {
-  background: url("../img/larakost.PNG") no-repeat center center;
+  background: url("https://github.com/yudartcode/yudartcode.github.io/blob/master/img/larakost.PNG?raw=true") no-repeat center center;
 }
 
 #wisata {
-  background: url("../img/android.png") no-repeat center center;
+  background: url("https://github.com/yudartcode/yudartcode.github.io/blob/master/img/android.png?raw=true") no-repeat center center;
 }
 
 #mantuku {
-  background: url("../img/laravel.jpg") no-repeat center center;
+  background: url("https://github.com/yudartcode/yudartcode.github.io/blob/master/img/laravel.jpg?raw=true") no-repeat center center;
 }
 
 label {
