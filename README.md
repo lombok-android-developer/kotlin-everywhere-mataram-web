@@ -1,5 +1,7 @@
 
 # KOTLIN/Everywhere & Hacktoberfest Mataram
+## See who has contributed
+more information : http://hacktoberfest-mataram.herokuapp.com/
 ## WEB Challenge 
 
 Dalam repository ini anda di challenge untuk membuat sebuah website dengan menggunakan Kotlin. Framework yang digunakan pada repository ini yakni: [ktor](http://ktor.io/).
