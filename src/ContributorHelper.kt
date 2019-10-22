@@ -1,6 +1,5 @@
 package com.linov.community
 
-
 import com.linov.community.contributors.*
 import io.ktor.application.ApplicationCall
 
@@ -23,7 +22,6 @@ object ContributorHelper {
             YudaKarnaen.initialize(this)
             AnasSegafMulachela.initialize(this)
             LukmanHakim.initialize(this)
-
             // todo tambahkan inisialisasi ke class Contributor anda
         }
     }
