@@ -93,7 +93,7 @@ Before start contributing, please give star to this repo.
 - don't change other people's IDs that already exist. first come first serve. for those who override the name another person, it will not be merged(Pull Request Rejected)
 
 8. after the class created, open file `ContributorHelper.kt`
-9. add your Inisialitation class contribution into the block of the class ContributorHelper. e.g. :
+9. add your initialization class contribution into the block of the class ContributorHelper. e.g. :
 
 ```kotlin
     init {

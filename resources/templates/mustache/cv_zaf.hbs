@@ -1,0 +1,26 @@
+<!--=================================================================
+  _                    _           _    ____             
+ | |    ___  _ __ ___ | |__   ___ | | _|  _ \  _____   __
+ | |   / _ \| '_ ` _ \| '_ \ / _ \| |/ / | | |/ _ \ \ / /
+ | |__| (_) | | | | | | |_) | (_) |   <| |_| |  __/\ V / 
+ |_____\___/|_| |_| |_|_.__/ \___/|_|\_\____/ \___| \_/  
+
+  _   _            _    _        _                __           _   
+ | | | | __ _  ___| | _| |_ ___ | |__   ___ _ __ / _| ___  ___| |_ 
+ | |_| |/ _` |/ __| |/ / __/ _ \| '_ \ / _ \ '__| |_ / _ \/ __| __|
+ |  _  | (_| | (__|   <| || (_) | |_) |  __/ |  |  _|  __/\__ \ |_ 
+ |_| |_|\__,_|\___|_|\_\\__\___/|_.__/ \___|_|  |_|  \___||___/\__|
+                                                                   
+=====================================================================
+
+    Lightweight CV template for geeks around the web.
+    Built with this project:
+
+    https://github.com/23Pstars/zaf-cv
+
+    - single optimized HTML file
+    - no overkill fancy frameworks
+    - no additional assets, and
+    - no one cares ...
+
+--><!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{{user.name}} - {{user.currentJob}}</title><style>@import url("https://fonts.googleapis.com/css?family=Quicksand:400,600&display=swap");*{font-family:Quicksand, sans-serif !important}body{margin:0;padding:0;font-size:14px}body .topbar{text-align:center;padding:8px 0;background:#009688;color:#eee;font-size:24px;font-weight:bold;position:fixed;width:100%;top:0}body .container{max-width:860px;margin-left:auto;margin-right:auto;padding:0;margin-top:64px;color:#333}body .container .main{float:left;max-width:544px;width:100%;padding:0 0 0 16px}body .container .main h2{color:#009688;margin-top:0;font-size:18px}body .container .main ul{padding-left:0;list-style:none}body .container .main ul.works li,body .container .main ul.educations li{padding:8px 16px;border-bottom:thin dotted #ddd}body .container .main ul.works li:first-child,body .container .main ul.educations li:first-child{border-top:thin dotted #ddd}body .container .main ul.works li h3,body .container .main ul.educations li h3{margin:0 0 8px;color:#cf8a05}body .container .main ul.works li p,body .container .main ul.educations li p{margin:0 0 4px;font-weight:bold}body .container .main ul.works li span,body .container .main ul.educations li span{font-style:italic}body .container .main ul.skills li{font-style:italic;display:inline}body .container .main ul.skills li:before{content:",  "}body .container .main ul.skills li:first-child:before{content:""}body .container .sidebar{text-align:right;float:left;max-width:284px;width:100%;padding:0 16px 0 0;position:sticky;top:64px}body .container .sidebar .photo img{max-width:100px}body .container .sidebar ul{padding:0}body .container .sidebar ul.info{list-style:none}body .container .sidebar ul.info li{padding:8px 0;border-bottom:thin solid #ddd}body .container .sidebar ul.info li .name{color:#009688;font-weight:bold;margin:0}body .container .sidebar ul.social li{display:inline;padding:0 8px}body .container .sidebar ul.social li a{display:inline-block}body .container .clear{clear:both}</style></head><body><div class="topbar">Portfolio</div><div class="container"><div class="sidebar"><div class="photo"><img src="{{user.photoUrl}}"></div><ul class="info"><li><h2 class="name">{{user.name}}</h2></li><li>{{user.currentJob}}</li><li>{{user.email}}</li></ul><br><ul class="social"><li><a href="https://t.me/{{user.idTelegram}}"><img height="16" width="16" src="https://unpkg.com/simple-icons@latest/icons/telegram.svg"></a></li><li><a href="https://github.com/search?q={{user.idGithub}}"><img height="16" width="16" src="https://unpkg.com/simple-icons@latest/icons/github.svg"></a></li><li><a href="{{user.linkedin}}"><img height="16" width="16" src="https://unpkg.com/simple-icons@latest/icons/linkedin.svg"></a></li><li><a href="{{user.stackOverflow}}"><img height="16" width="16" src="https://unpkg.com/simple-icons@latest/icons/stackoverflow.svg"></a></li><li><a href="https://www.google.com/maps/search/{{user.location}}"><img height="16" width="16" src="https://unpkg.com/simple-icons@latest/icons/openstreetmap.svg"></a></li></ul></div><div class="main"><h2>About</h2><p>{{user.descriptions}}</p><br><h2>Works</h2><ul class="works">{{#user.jobHistory}}<li><h3>{{company}}</h3><p>{{position}}</p><span>{{startYears}} - {{endYears}}</span></li>{{/user.jobHistory}}</ul><br><h2>Skills</h2><ul class="skills">{{#user.skillset}}<li>{{name}}</li>{{/user.skillset}}</ul><br><h2>Educations</h2><ul class="educations">{{#user.educations}}<li><h3>{{institution}}</h3><p>{{descriptions}} ({{grade}})</p><span>{{years}}</span></li>{{/user.educations}}</ul></div><div class="clear"></div></div></body></html>
