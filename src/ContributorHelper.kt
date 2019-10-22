@@ -1,6 +1,5 @@
 package com.linov.community
 
-
 import com.linov.community.contributors.*
 import io.ktor.application.ApplicationCall
 
