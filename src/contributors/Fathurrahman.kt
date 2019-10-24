@@ -33,14 +33,12 @@ class Fathurrahman : Contributor {
         get() = "@fathur_ashter15"
     override val skillset: List<Skills>?
         get() = listOf(
-            Skills("Java", expertiseRate= 40),
-            Skills("Android", expertiseRate= 30),
-            Skills("Python", expertiseRate= 40),
-            Skills("PHP Laravel", expertiseRate= 55),
-            Skills("HTML", expertiseRate= 90),
-            Skills("CSS", expertiseRate= 75),
-            Skills("Javascript", expertiseRate= 55),
-            Skills("NodeJs", expertiseRate= 60)
+            Skills("Java"),
+            Skills("PHP Laravel"),
+            Skills("HTML"),
+            Skills("CSS"),
+            Skills("Javascript"),
+            Skills("NodeJs")
         )
     override val location: String?
         get() = "Mataram, Indonesia"
@@ -82,7 +80,7 @@ class Fathurrahman : Contributor {
         )
 
     override suspend fun response(call: ApplicationCall) {
-        call.respond(MustacheContent("cv_yuda.hbs", mapOf("user" to this)))
+        call.respond(MustacheContent("cv.hbs", mapOf("user" to this)))
     }
 
     companion object {
