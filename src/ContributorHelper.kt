@@ -12,6 +12,7 @@ object ContributorHelper {
             AddinGamaBertaqwa.initialize(this)
             AriPurnamaAJi.initialize(this)
             AhmadZafrullah.initialize(this)
+            IlhamBintang.initialize(this)
             Anwar907.initialize(this)
             GustiCahya.initialize(this)
             RahmatFathoni.initialize(this)
@@ -21,6 +22,8 @@ object ContributorHelper {
             YudaKarnaen.initialize(this)
             AnasSegafMulachela.initialize(this)
             AgungSaputra.initialize(this)
+            RickyAnwar.initialize(this)
+            BagiHartawan.initialize(this)
             Jiadibo.initialize(this)
 
             // todo tambahkan inisialisasi ke class Contributor anda
