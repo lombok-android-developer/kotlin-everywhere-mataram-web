@@ -9,6 +9,7 @@ object ContributorHelper {
     init {
         contributors.apply {
             Regina.initialize(this)
+            Hanaramdhani.initialize(this)
             AddinGamaBertaqwa.initialize(this)
             AriPurnamaAJi.initialize(this)
             AhmadZafrullah.initialize(this)
