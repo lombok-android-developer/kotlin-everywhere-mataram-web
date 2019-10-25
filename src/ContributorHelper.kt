@@ -25,6 +25,7 @@ object ContributorHelper {
             RickyAnwar.initialize(this)
             BagiHartawan.initialize(this)
             Jiadibo.initialize(this)
+            Hanaramdhani.initialize(this)
 
             // todo tambahkan inisialisasi ke class Contributor anda
         }
