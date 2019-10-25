@@ -9,6 +9,9 @@ object ContributorHelper {
     init {
         contributors.apply {
             Regina.initialize(this)
+            Hanaramdhani.initialize(this)
+            Nengayu.initialize(this)
+            IndahPujiLestari.initialize(this)
             AddinGamaBertaqwa.initialize(this)
             AriPurnamaAJi.initialize(this)
             AhmadZafrullah.initialize(this)
@@ -20,16 +23,19 @@ object ContributorHelper {
             EbySofyan.initialize(this)
             NaufalPrakoso.initialize(this)
             YudaKarnaen.initialize(this)
+            RahmatRamadhan.initialize(this)
             AnasSegafMulachela.initialize(this)
+            LukmanHakim.initialize(this)
             AgungSaputra.initialize(this)
             RickyAnwar.initialize(this)
             BagiHartawan.initialize(this)
             Ardianta.initialize(this)
             Jiadibo.initialize(this)
+            Jayadi.initialize(this)
+            IDzuna96.initialize(this)
             WahyuSyarif.initialize(this)
             Fathurrahman.initialize(this)
             HayiNukman.initialize(this)
-            IndahPujiLestari.initialize(this)
             // todo tambahkan inisialisasi ke class Contributor anda
         }
     }
