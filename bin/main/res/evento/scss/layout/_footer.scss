@@ -1,0 +1,109 @@
+footer{
+  padding: 50px 0 100px;
+  background-color: #0b031b;
+
+  .footer_box{
+    position: relative;
+    margin-top: 50px;
+    h4.footer_title {
+      text-transform: uppercase;
+      padding: 10px 0;
+      font-size: 18px;
+      color: #ffffff;
+      &:before {
+        width: 30px;
+        content: " ";
+        position: absolute;
+        border-top: solid 3px #f50136;
+        left: 0;
+        top: 0;
+      }
+    }
+  }
+
+  .footer_header{
+    margin-bottom: 30px;
+  }
+
+  .footer_social{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    li{
+      display: inline-block;
+      margin:5px ;
+      a{
+        border: solid 1px $color-primary;
+        display: block;
+        border-radius: 50px;
+        padding: 7px 0;
+        font-size: 24px;
+        color: $color-primary;
+        width: 40px;
+        height: 40px;
+        text-align: center;
+        &:hover{
+          background-color: $color-primary;
+          color: $color-light;
+        }
+      }
+
+    }
+  }
+
+  ul.instagram_list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    li {
+      display: inline-block;
+      width: 30%;
+      margin: 0 0 2% 2%;
+      float: left;
+    }
+  }
+  .newsletter_form .form-control{
+    background-color: #1f1039;
+    border: solid 1px #1f1039;
+    font-weight: 500;
+    color: #ffffff;
+  }
+}
+
+.copyright_footer{
+  background-color: #080113;
+  padding: 15px;
+
+  p{
+    font-size: 13px;
+    padding: 10px;
+    text-transform: capitalize;
+    color: #ffffff;
+  }
+  ul.footer_menu {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    direction: rtl;
+    li {
+      display: inline-block;
+      a {
+        padding: 10px;
+        text-transform: capitalize;
+        color: $color-dark-gray;
+        &:hover{
+          color: $color-light;
+        }
+      }
+    }
+  }
+}
+
+
+
+//footer responsive
+@media(max-width:767px){
+  .copyright_footer{
+    text-align: center;
+  }
+}
