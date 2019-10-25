@@ -1,0 +1,83 @@
+// ----------------------------------------------------------------------
+//colors
+// ----------------------------------------------------------------------
+$color-primary:#f50136;
+$color-gray:#f0f2f6;
+$color-dark-gray:#838383;
+$color-dark:#333333;
+$color-black:#18181c;
+$color-light:#ffffff;
+$color-green:#6cc47f;
+$color-blue:#0652fd;
+$color-red:#f97794;
+$color-orange:#f79257;
+$color-yellow:#ffbf00;
+$color-purple:#926cc4;
+
+
+
+
+// ----------------------------------------------------------------------
+//fonts
+// ----------------------------------------------------------------------
+$font: 'Montserrat', sans-serif;
+
+
+
+
+
+// ----------------------------------------------------------------------
+//mix in
+// ----------------------------------------------------------------------
+@mixin background-opacity($color, $opacity: 0.4) {
+  background: $color; /* The Fallback */
+  background: rgba($color, $opacity);
+}
+// ----------------------------------------------------------------------
+// Transitions
+// example: @include single-transition(background, 1s, ease-in-out);
+// ----------------------------------------------------------------------
+@mixin single-transition($property, $duration, $timing-function) {
+  -webkit-transition: $property $duration $timing-function;
+  -moz-transition: $property $duration $timing-function;
+  -o-transition: $property $duration $timing-function;
+  transition: $property $duration $timing-function;
+}
+
+// ----------------------------------------------------------------------
+// Linear Gradients
+// example: @include linearGradient(#cccccc, #333333);
+// ----------------------------------------------------------------------
+@mixin linearGradient($top, $bottom) {
+  background: #{$top};
+  background:   -moz-linear-gradient(left, #{$top} 0%, #{$bottom} 100%);
+  background:   -webkit-gradient(linear, left top, right top, color-stop(0%, #{$top}), color-stop(100%, #{$bottom}));
+  background:   -webkit-linear-gradient(left, #{$top} 0%, #{$bottom} 100%);
+  background:   -o-linear-gradient(left, #{$top} 0%, #{$bottom} 100%);
+  background:   -ms-linear-gradient(left, #{$top} 0%, #{$bottom} 100%);
+  background:   linear-gradient(to right, #{$top} 0%, #{$bottom} 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$top}', endColorstr='#{$bottom}', GradientType=0 );
+}
+// ----------------------------------------------------------------------
+// Linear Gradient angle
+// example: @include linear-gradient(-10, #cccccc, #333333);
+// ----------------------------------------------------------------------
+@mixin linear-gradient($angle, $colorStart, $colorStop){
+  background: #{$colorStart};
+  background: -webkit-linear-gradient($angle,  #{$colorStart} 0%,#{$colorStop} 100%);
+  background:    -moz-linear-gradient($angle,  #{$colorStart} 0%,#{$colorStop} 100%);
+  background:      -o-linear-gradient($angle,  #{$colorStart} 0%,#{$colorStop} 100%);
+  background:     -ms-linear-gradient($angle,  #{$colorStart} 0%,#{$colorStop} 100%);
+  background:         linear-gradient(to $angle,  #{$colorStart} 0%,#{$colorStop} 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$colorStart}', endColorstr='#{$colorStop}',GradientType=1 );
+}
+
+// ----------------------------------------------------------------------
+// Box Shadow
+// example: @include box-shadow(1px, 2px, 2px, 2px, #000);
+// ----------------------------------------------------------------------
+@mixin box-shadow($hoff: false, $voff: false, $blur: false, $spread: false, $color: false){
+  -webkit-box-shadow: $hoff $voff $blur $spread $color;
+  -moz-box-shadow: $hoff $voff $blur $spread $color;
+  box-shadow: $hoff $voff $blur $spread $color;
+}
