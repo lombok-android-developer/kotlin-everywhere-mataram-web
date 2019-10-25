@@ -20,6 +20,7 @@ object ContributorHelper {
             EbySofyan.initialize(this)
             NaufalPrakoso.initialize(this)
             YudaKarnaen.initialize(this)
+            RahmatRamadhan.initialize(this)
             AnasSegafMulachela.initialize(this)
             LukmanHakim.initialize(this)
             AgungSaputra.initialize(this)
