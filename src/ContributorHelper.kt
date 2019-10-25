@@ -8,6 +8,7 @@ object ContributorHelper {
 
     init {
         contributors.apply {
+            RizkyTumangger.initialize(this)
             Regina.initialize(this)
             Hanaramdhani.initialize(this)
             Nengayu.initialize(this)
