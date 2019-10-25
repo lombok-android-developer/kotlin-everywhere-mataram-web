@@ -28,6 +28,7 @@ object ContributorHelper {
             BagiHartawan.initialize(this)
             Ardianta.initialize(this)
             Jiadibo.initialize(this)
+            Jayadi.initialize(this)
             IDzuna96.initialize(this)
             WahyuSyarif.initialize(this)
             Fathurrahman.initialize(this)
