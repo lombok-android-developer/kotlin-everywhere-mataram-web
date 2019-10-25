@@ -24,10 +24,9 @@ object ContributorHelper {
             AgungSaputra.initialize(this)
             RickyAnwar.initialize(this)
             BagiHartawan.initialize(this)
+            Ardianta.initialize(this)
             Jiadibo.initialize(this)
             Fathurrahman.initialize(this)
-
-
             // todo tambahkan inisialisasi ke class Contributor anda
         }
     }
