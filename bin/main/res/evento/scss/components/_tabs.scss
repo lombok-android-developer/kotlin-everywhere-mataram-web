@@ -1,0 +1,75 @@
+.table.event_calender {
+  position: relative;
+  min-width: 1000px;
+  thead.event_title{
+  background-color: $color-primary;
+  color: $color-light;
+  border: 0;
+    th {
+      vertical-align: bottom;
+      border: 0;
+      font-size: 18px;
+      text-transform: capitalize;
+      font-weight: 600;
+      i{
+        font-size: 32px;
+        float: left;
+        line-height: 1;
+      }
+      span{
+        margin-left: 10px;
+        padding: 3px 0;
+        display: inline-block;
+      }
+    }
+  }
+  tbody{
+    background-color: $color-gray;
+    td,th{
+      padding: 30px 25px;
+      border: 0;
+      vertical-align: middle;
+      text-align: center;
+      img{
+        border-radius: 4px;
+        display: block;
+        max-width: 100px;
+      }
+    }
+    td.event_date{
+      font-weight: 600;
+      font-size: 30px;
+      color: #000;
+      span{
+        display: block;
+        font-weight: 400;
+        font-size: 14px;
+      }
+    }
+    td.event_place{
+      h5{
+        font-size: 18px;
+        margin-bottom: 5px;
+        font-weight: 500;
+      }
+      h6{
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 500;
+        margin-bottom: 0;
+      }
+    }
+    td.buy_link a{
+      text-transform: capitalize;
+      font-weight: 600;
+      color: #f50136;
+      text-decoration: underline;
+      line-height: 24px;
+      @include single-transition(all,ease-in-out,0.4s);
+      &:hover{
+        color: $color-black;
+        @include single-transition(all,ease-in-out,0.4s);
+      }
+    }
+  }
+}
