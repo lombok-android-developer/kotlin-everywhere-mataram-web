@@ -82,7 +82,10 @@ fun Application.module(testing: Boolean = false) {
         }
         get("/") {
             call.respond(
-                MustacheContent("index.html", mapOf("contributors" to ContributorHelper.mapIdToContributor()))
+                MustacheContent("index.html", mapOf(
+                    "contributors" to ContributorHelper.mapIdToContributor(),
+                    "teams" to ContributorHelper.mapIdToContributor().takeLast(4)
+                ))
             )
         }
 
