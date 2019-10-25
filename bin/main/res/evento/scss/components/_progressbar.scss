@@ -1,0 +1,69 @@
+//progressbar
+.single_progressbar {
+  position: relative;
+  margin-top:30px;
+  .progress_text {
+    margin-bottom: 5px;
+    color: $color_dark;
+    font-weight: 500;
+    font-size: 15px;
+    text-transform: capitalize;
+    span.progress_bar {
+      color: $color_dark;
+    }
+    .progress_num{
+      position: absolute;
+      left: 90%;
+    }
+  }
+  .progress {
+    margin-bottom: 5px;
+    overflow: hidden;
+    @include background-opacity($color_primary, 0.2);
+    border-radius: 1px;
+    box-shadow: 0 0 0;
+
+    .progress-bar {
+      height: 4px;
+      font-size: 16px;
+      line-height: 16px;
+      text-align: center;
+      background-color: $color_primary;
+    }
+  }
+}
+
+
+
+
+//accordion
+
+.accordion_card{
+  border: solid 1px $color-primary;
+  border-radius: 0;
+  margin: 15px 0;
+  .card-header{
+    color: #ffffff;
+    border-bottom: 0;
+    border-radius: 0 !important;
+    padding: 0;
+    h5{
+      margin: 0;
+      a{
+        background-color: $color-light;
+        color: $color-primary;
+        display: block;
+        padding: 15px;
+        border-bottom: solid 1px $color-primary;
+      }
+      a.collapsed{
+        background-color: $color-primary;
+        color: $color-light;
+        border-bottom: solid 0 $color-primary;
+      }
+    }
+  }
+  .card-body{
+    font-size: 16px;
+  }
+}
