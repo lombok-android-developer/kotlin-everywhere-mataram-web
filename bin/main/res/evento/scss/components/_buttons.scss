@@ -1,0 +1,97 @@
+.btn{
+  font-size: 12px;
+  line-height: 1.7;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 500;
+  padding: 12px 40px;
+  border-radius: 0;
+  outline: 0 !important;
+  border: none;
+  cursor: pointer;
+  background-color: $color-black;
+  @include single-transition(all , 300ms , ease-in-out);
+  &:hover{
+    color: $color-black;
+    background-color: #fff;
+    @include single-transition(all , 300ms , ease-in-out);
+  }
+  &:focus{
+    outline: 0 !important;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  }
+}
+
+.btn-sm{
+  padding: 10px 20px;
+}
+.btn-lg{
+  padding: 18px 50px;
+}
+.btn_center{
+  margin: 0 auto;
+  display: block;
+}
+.btn.btn-shadow{
+  @include box-shadow(3px,4px,5px,0, rgba(0, 0, 0, 0.09));
+  &:hover{
+    @include box-shadow(1px,1px,1px,0, rgba(0, 0, 0, 0.09));
+  }
+}
+
+.btn-rounded{
+  border-radius: 50px;
+ }
+
+.btn-primary{
+  background-color: $color-primary;
+  border: solid 1px $color-primary;
+  color: $color-light;
+  @include single-transition(all , 300ms , ease-in-out);
+  &:hover{
+    background-color: $color-black;
+    color: $color-light;
+    border: solid 1px $color-black;
+    @include single-transition(all , 300ms , ease-in-out);
+  }
+}
+
+
+.btn-primary-outline{
+  background-color: transparent;
+  border: solid 1px $color-primary;
+  color:  $color-primary;
+  @include single-transition(all , 300ms , ease-in-out);
+  &:hover{
+    background-color: $color-primary;
+    color: $color-light;
+    @include single-transition(all , 300ms , ease-in-out);
+  }
+}
+
+
+.btn-light{
+  background-color: $color-light;
+  border: solid 1px $color-light;
+  color: $color-black;
+  @include single-transition(all , 300ms , ease-in-out);
+  &:hover{
+    color: $color-light;
+    border: solid 1px $color-black;
+    background-color: $color-black;
+    @include single-transition(all , 300ms , ease-in-out);
+  }
+}
+
+.btn-dark{
+  background-color: $color-dark;
+  border: solid 1px $color-black;
+  color: $color-light;
+  @include single-transition(all , 300ms , ease-in-out);
+  &:hover{
+    color: $color-black;
+    border: solid 1px $color-light;
+    background-color: $color-light;
+    @include single-transition(all , 300ms , ease-in-out);
+  }
+}
