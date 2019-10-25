@@ -1,0 +1,100 @@
+.testimonial_carousel{
+  border: solid 2px $color-primary;
+  padding: 25px;
+  position: relative;
+  margin: 15px 0;
+
+  p{
+    font-style: italic;
+  }
+  .testimonial_author{
+    display: inline-block;
+    position: relative;
+    padding: 15px 60px;
+    img{
+      position: absolute;
+      left: 0;
+      width: 50px;
+      height: 50px;
+    }
+    h5{
+      font-size: 14px;
+      text-transform: capitalize;
+      margin: 0;
+      padding: 0;
+      font-weight: 500;
+      color: $color-dark;
+      padding-top: 10px;
+    }
+    p{
+      margin: 0;
+      padding: 0;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      text-transform: capitalize;
+      span{
+        color: $color-primary;
+      }
+    }
+  }
+
+  &:before{
+    content: "\f347";
+    font-family: "Ionicons";
+    position: absolute;
+    color: $color-black;
+    top: -10px;
+    background-color: $color-light;
+    padding: 0 35px;
+    font-size: 18px;
+    left: 15px;
+    line-height: 0.8;
+  }
+
+}
+
+.testimonial_carousel{
+  .slick-dots {
+    position: absolute;
+    bottom: 50px;
+    right: 15px;
+    left: auto;
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: right;
+    li{
+      position: relative;
+      display: inline-block;
+      width: 11px;
+      height: 10px;
+      margin: 0 1px;
+      padding: 0;
+      cursor: pointer;
+      button{
+        position: relative;
+        display: inline-block;
+        width: 6px;
+        height: 6px;
+        background-color: #856404;
+        border-radius: 50%;
+        margin: 0 1px;
+        opacity: 0.5;
+        padding: 0;
+        cursor: pointer;
+        &:before{
+          content: "";
+          opacity: 0;
+        }
+      }
+    }
+    li.slick-active{
+      button{
+        opacity: 1;
+      }
+    }
+  }
+}

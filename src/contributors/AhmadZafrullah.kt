@@ -83,7 +83,7 @@ class AhmadZafrullah : Contributor {
         )
 
     override suspend fun response(call: ApplicationCall) {
-        call.respond(MustacheContent("cv.hbs", mapOf("user" to this)))
+        call.respond(MustacheContent("cv_zaf.hbs", mapOf("user" to this)))
     }
 
     companion object {
