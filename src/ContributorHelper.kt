@@ -32,7 +32,6 @@ object ContributorHelper {
             IDzuna96.initialize(this)
             WahyuSyarif.initialize(this)
             Fathurrahman.initialize(this)
-            medicare.initialize(this)
             AriPurnamaAJi.initialize(this)
             Anwar907.initialize(this)
             Jiadibo.initialize(this)
