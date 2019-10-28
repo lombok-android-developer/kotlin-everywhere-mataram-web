@@ -37,7 +37,6 @@ object ContributorHelper {
             Anwar907.initialize(this)
             Jiadibo.initialize(this)
             HayiNukman.initialize(this)
-            medicare.initialize(this)
             // todo tambahkan inisialisasi ke class Contributor anda
         }
     }
