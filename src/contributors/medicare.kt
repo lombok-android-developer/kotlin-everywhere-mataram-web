@@ -13,7 +13,7 @@ class medicare : Contributor {
     override val descriptions: String?
         get() = "Mahasiswa Computer since Bumigora University"
     override val currentJob: String?
-        get() = "Web Developer"
+        get() = "Lecture assistance Bumigora University"
     override val idGithub: String
         get() = "medicare-github"
     override val name: String
@@ -40,22 +40,28 @@ class medicare : Contributor {
                 "Bumigora",
                 "Tukang ngajar",
                 "2019",
-                "-"
+                "2020"
             ),
             Jobs(
                 "member Forkim",
                 "Media informasi KLU",
                 "Jurnalis",
                 "2019",
-                "-"
+                "2020"
             )
         )
     override val educations: List<Educations>?
         get() = listOf(
             Educations(
+                "SMAN 1 BAYAN",
+                "Senior Hight School",
+                "2016",
+                "Student Of SMAN 1 Bayan"
+            ),
+            Educations(
                 "Bumigora University",
                 "S1",
-                "2016",
+                "2019",
                 "Student Of UBG"
             )
         )
