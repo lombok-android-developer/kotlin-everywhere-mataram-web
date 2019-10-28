@@ -38,7 +38,7 @@ class medicare : Contributor {
             Jobs(
                 "Lecture Assistance Bumigora University",
                 "Bumigora",
-                "Tukang ngajar",
+                "assistance learning Website",
                 "2019",
                 "2020"
             ),
